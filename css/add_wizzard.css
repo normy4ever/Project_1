@@ -1,0 +1,229 @@
+/* root element for tabs  */
+
+#wizard{
+	margin-top:45px;
+	margin-left:25px;
+	font-family:'Kreon', arial, serif;
+	color:#FFFFFF;
+}
+
+.tabs { 
+	list-style:none; 
+	margin:0 !important; 
+	padding:0;
+	height:30px;
+	
+}
+
+/* single tab */
+.tabs li { 
+	float:left;	 
+	text-indent:0;
+	padding:0;
+	margin:0 !important;
+	list-style-image:none !important; 
+}
+
+/* link inside the tab. uses a background image */
+.tabs a { 
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-bottom-right-radius:0px;
+	border-bottom-left-radius:0px;
+	border-left:1px solid #cfaf89;
+	border-right:1px solid #cfaf89;
+	border-top:1px solid #cfaf89;	
+	font-size:16px;
+	font-family:'Kreon', arial, serif;
+	display:block;
+	height: 30px;  
+	line-height:30px;
+	width: 111px;
+	text-align:center;	
+	text-decoration:none;
+	color:#8b1213;
+	padding:0px;
+	margin:1px;	
+	position:relative;
+	top:1px;
+}
+
+.tabs a:active {
+	outline:none;	
+	color:#8b1213;
+	text-shadow: #6374AB 2px -2px 2px;	
+}
+
+/* when mouse enters the tab move the background image */
+.tabs a:hover {
+	border-left:1px solid #997a5a;
+	border-right:1px solid #997a5a;
+	border-top:1px solid #997a5a;
+}
+
+/* active tab uses a class name "current". it's highlight is also done by moving the background image. */
+.tabs .current, .tabs .current:hover, .tabs li.current a {
+	background-position: -652px -62px;		
+	cursor:default !important; 
+	text-shadow: #FFFFFF 2px 2px 2px !important;
+}
+
+/* Different widths for tabs: use a class name: w1, w2, w3 or w2 */
+
+
+/* width 1 */
+.tabs .w1 			{ background-position: -519px 0; width:134px; }
+.tabs .w1:hover 	{ background-position: -519px -31px; }
+.tabs .w1.current { background-position: -519px -62px; }
+
+/* width 2 */
+.tabs .w2 			{ background-position: -366px -0px; width:154px; }
+.tabs .w2:hover 	{ background-position: -366px -31px; }
+.tabs .w2.current { background-position: -366px -62px; }
+
+
+/* width 3 */
+.tabs .w3 			{ background-position: -193px -0px; width:174px; }
+.tabs .w3:hover 	{ background-position: -193px -31px; }
+.tabs .w3.current { background-position: -193px -62px; }
+
+/* width 4 */
+.tabs .w4 			{ background-position: -0px -0px; width:194px; }
+.tabs .w4:hover 	{ background-position: -0px -31px; }
+.tabs .w4.current { background-position: -0px -62px; }
+
+
+/* initially all panes are hidden */ 
+.panes .pane {
+	display:none;		
+}
+
+/* tab pane styling */
+.panes div {
+	display:none;		
+	padding:15px 10px;
+	border:1px solid #999;
+	border-top:0;
+	height:auto;
+	font-size:14px;
+	background-color:#fff;
+	margin-top:3px;
+}
+
+.panes{
+	width:90%;
+	height:auto;
+}
+	
+div.panes div {
+	background: -moz-linear-gradient(left top, #997a5a, #cfaf89);
+    /* Chrome, Safari:*/
+    background: -webkit-gradient(linear,left top, right bottom, from(#997a5a), to(#cfaf89));
+	/* IE:*/
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#997a5a', EndColorStr='#cfaf89', GradientType=0);
+	background-color:#bb9465;
+	height:auto;
+}
+
+div.panes label {
+	margin-bottom:15px;
+	display:block;
+}
+
+label.error {
+	color:red;
+}
+
+/*buttons*/
+.stepback, .stepforw{
+	background:none;
+	outline:none;	
+	color:#8b1213;
+	font-family:'Kreon', arial, serif;
+	font-size:16px;
+	border:0;
+    margin:0;
+    padding:0;
+}
+
+.stepback
+{
+	float:left;
+}
+
+.stepforw
+{
+	float:right;
+}
+
+.stepback:hover, .stepforw:hover{
+	text-shadow: #CCCCCC 2px 2px 2px !important;
+}
+
+.form_buttons{
+	width:600px;
+	margin:0 auto;
+	left:auto;
+	right:auto;
+	line-height:25px;
+	margin-top:15px;
+	overflow:auto;
+}
+
+.form_buttons input{
+	display:block;
+	float:right;
+	background:none;
+	outline:none;	
+	color:#8b1213;
+	font-family:'Kreon', arial, serif;
+	font-size:16px;
+	border:0;
+    margin:0;
+    padding:0;
+	cursor:pointer;	
+}
+
+.form_buttons a{
+	width:auto;
+	display:block;
+	cursor:pointer;	
+}
+
+.steptitle{
+	width:70%;
+	margin-left:43px;
+	font-size:20px;
+	color:white;
+	border-bottom:1px dotted white;
+}
+
+#cazare_upload form{
+	margin-top:2px;
+	padding-top:0px;
+}
+
+#extras_upload{
+	width:100%;
+	height:auto;
+}
+
+#contact_upload p{
+	margin-left:50px;
+}
+
+
+
+form input, form select, form textarea, #contact_upload input{
+	background:none;
+	background-color:#cfaf89;
+	color:#8b1213;
+}
+
+.checkbox{
+	width:220px;
+	float:left;
+	height:25px;
+	overflow:auto;
+	margin-left:50px;
+}

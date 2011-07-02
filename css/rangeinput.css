@@ -1,0 +1,71 @@
+
+/* slider root element */
+.slider { 
+	background:#ffcc8d ; 
+	height:3px; 
+	position:relative; 
+	cursor:pointer;
+	border:1px solid #333;
+	width:200px;
+	float:left; 
+	clear:right;
+	margin-top:15px;
+	margin-left:30px;
+	-moz-border-radius:5px; 
+	-webkit-border-radius:5px; 
+	-moz-box-shadow:1px 2px 8px #444444;
+}
+
+/* progress bar (enabled with progress: true) */
+.progress {
+	height:9px; 
+	background-color:#C5FF00; 
+	display:none;
+	opacity:0.6;
+	float:right;
+}
+
+/* drag handle */
+.handle { 
+	background:#6f1211;
+	background: -moz-linear-gradient(left top, #bf958b, #6f1211);
+    /* Chrome, Safari:*/
+    background: -webkit-gradient(linear,left top, right bottom, from(#997a5a), to(#cfaf89));
+	/* IE:*/
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#997a5a', EndColorStr='#cfaf89', GradientType=0); 
+	height:12px;
+	width:12px;
+	top:-6px;
+	position:absolute; 
+	display:block; 
+	margin-top:1px;
+	border:1px solid #000;
+	cursor:move;
+	border:1px solid #6f1211;
+	-moz-border-radius:14px;
+	-webkit-border-radius:14px; 
+}
+
+/* the input field */
+.range {
+	background:#cfaf89;
+	background: -moz-linear-gradient(left top, #997a5a, #cfaf89);
+    /* Chrome, Safari:*/
+    background: -webkit-gradient(linear,left top, right bottom, from(#997a5a), to(#cfaf89));
+	/* IE:*/
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#997a5a', EndColorStr='#cfaf89', GradientType=0);
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+	color:#6f1211;
+	margin:6px 0 0 18px;
+	padding:3px 0;
+	text-align:center;
+	width:40px;
+	-moz-border-radius:5px; 
+	-webkit-border-radius:5px;
+	-moz-box-shadow: 2px 3px 8px #333;
+	-webkit-box-shadow: 2px 3px 8px #333;
+	box-shadow: 2px 3px 8px #333; 		
+}
+

@@ -1,0 +1,243 @@
+.apple_overlay .close {
+	background-image:url(../img/overlay/close.png);
+	position:absolute;
+    right:5px;
+    top:5px;
+	cursor:pointer;
+	height:35px;
+	width:35px;
+}
+
+
+.detail{
+		width:960px;
+		height:auto;
+		background-image:url(../img/detail_back.png);
+        background-repeat: no-repeat;
+        background-position: top;
+		display:none;
+		padding:20px;
+        margin-top: 5px;
+		overflow:visible;
+        
+}
+
+
+
+/*
+	root element for the scrollable.
+	when scrolling occurs this element stays still.
+*/
+.mini_pics {
+
+	/* required settings */
+	position:relative;
+	overflow:hidden;
+	width: 810px;
+	height:120px;
+    margin-top: 5px;
+    margin-left: 20px;
+	/* custom decorations */
+	border-bottom:1px dotted #333333;
+	
+}
+
+/*
+	root element for scrollable items. Must be absolutely positioned
+	and it should have a extremely large width to accomodate scrollable items.
+	it's enough that you set the width and height for the root element and
+	not for this element.
+*/
+.mini_pics .smalls {
+	/* this cannot be too large */
+	width:20000em;
+	position:absolute;
+	clear:both;
+}
+
+.smalls div {
+	float:left;
+	width:800px;
+}
+
+/* single scrollable item */
+.mini_pics img {
+	float:left;
+	margin:20px 5px 20px 21px;
+	background-color:#fff;
+	padding:2px;
+	border:1px solid #ccc;
+	width:100px;
+	height:75px;
+	
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+}
+
+/* active item */
+.mini_pics .active {
+
+	position:relative;
+	cursor:default;
+    -moz-box-shadow: 2px 3px 8px #333;
+	-webkit-box-shadow: 2px 3px 8px #333;
+	box-shadow: 2px 3px 8px #333;
+}
+
+
+
+
+
+/* this makes it possible to add next button beside scrollable */
+.mini_pics {
+	float:left;	
+}
+
+/* prev, next, prevPage and nextPage buttons */
+a.browse {
+	background-image:url(../img/scrollable/arrow/hori_large.png);
+    background-repeat:no-repeat;
+	display:block;
+	width:30px;
+	height:30px;
+	float:left;
+	margin:40px 10px;
+	cursor:pointer;
+	font-size:1px;
+}
+
+/* right */
+a.right 				{ background-position: 0 -30px; clear:right; margin-right: 0px;}
+a.right:hover 		{ background-position:-30px -30px; }
+a.right:active 	{ background-position:-60px -30px; } 
+
+
+/* left */
+a.left				{ margin-left: 0px; } 
+a.left:hover  		{ background-position:-30px 0; }
+a.left:active  	{ background-position:-60px 0; }
+
+/* up and down */
+a.up, a.down		{ 
+	background:url(../img/scrollable/arrow/vert_large.png) no-repeat; 
+	float: none;
+	margin: 10px 50px;
+}
+
+/* up */
+a.up:hover  		{ background-position:-30px 0; }
+a.up:active  		{ background-position:-60px 0; }
+
+/* down */
+a.down 				{ background-position: 0 -30px; }
+a.down:hover  		{ background-position:-30px -30px; }
+a.down:active  	{ background-position:-60px -30px; } 
+
+
+/* disabled navigational button */
+a.disabled {
+	visibility:hidden !important;		
+}
+
+
+
+
+
+
+
+
+
+/* styling for the image wrapper  */
+#image_wrap {
+	/* dimensions */
+	width:500px;
+    height:375px;
+	margin:27px 10px 45px 40px;
+	
+    float: left;
+
+	/* centered */
+	text-align:center;
+
+	/* some "skinning" */
+	
+	outline:1px solid #ddd;
+	-moz-ouline-radius:4px;
+}
+
+#detail_text{
+    width: 360px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+	text-wrap:normal;    
+    padding: 6px;
+    font-family:'Kreon', arial, serif;
+	font-size:13px;
+    word-spacing: normal;
+	color:#930a0e;
+    
+}
+
+.detail_comfort{
+    float: left;
+    line-height: 25px;
+	list-style-type: none;
+	padding: 0;
+}
+
+.detail_comfort li{
+	background-image:url(../img/extras_checkbox.png);
+	background-repeat:no-repeat;
+	background-position: left;
+	padding-left: 22px;	
+}
+
+.image-title {
+    width: 200px;
+	margin:0 auto;
+	left:auto;
+	right:auto;
+    margin-top: 10px;
+	font-family:'Kreon', arial, serif;
+	font-size:24px;
+	text-decoration:underline;
+	color:#dcb88d;
+	text-shadow: 0 0 0.2em #000000, 0 0 0.2em #000000, 0 0 0.2em #000000;
+}
+
+#contact{
+	width:80%;
+	height:30px;
+	overflow:auto;
+	margin-top:-10px;
+	margin-left:5px;
+	float:left;
+	font-size:16px;
+	color:#930a0e;
+}
+
+#contact ul{
+	display: inline;
+}
+
+#contact ul li{
+	margin-left: 30px;
+	border-left: none;
+	list-style: none;
+	display: inline;
+}
+
+.cazare_nr{
+	float:left;
+	color:#8b1213;
+	margin-top:2px;
+	margin-left:50px;
+	font-size:35px;
+	overflow:hidden;
+	position:absolute;
+	z-index:-1520;
+	font-weight:bold;
+	font-family:'Architects Daughter', arial, serif;
+}
