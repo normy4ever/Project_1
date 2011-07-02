@@ -163,6 +163,14 @@
 			});
 
 		},
+        
+        Jump: function() {
+			var wizard = $("#wizard");
+            
+			var api = $("ul.tabs", wizard).data("tabs");
+            
+				api.click(3);
+		},
 		
 		
 		Loggin_show: function() {
@@ -197,6 +205,7 @@ $(document).ready(function() {
 	Application.Gallerify();
 	Application.Add_move();
 	Application.Add_wizzard();
+   // Application.Jump();
 });
 
 

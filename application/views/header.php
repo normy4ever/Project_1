@@ -47,7 +47,7 @@ echo meta($meta); */
 
 <body>
 
-		<? $jump='false';
+		<? 
 		
 			if($this->session->flashdata('message') ) { ?>
         

@@ -115,7 +115,7 @@
 	height:auto;
 }
 	
-div.panes div {
+div.panes div, #file_upload{
 	background: -moz-linear-gradient(left top, #997a5a, #cfaf89);
     /* Chrome, Safari:*/
     background: -webkit-gradient(linear,left top, right bottom, from(#997a5a), to(#cfaf89));
@@ -212,7 +212,10 @@ label.error {
 	margin-left:50px;
 }
 
-
+#file_upload{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 form input, form select, form textarea, #contact_upload input{
 	background:none;

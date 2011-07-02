@@ -2,6 +2,7 @@
 
 class Add extends CI_Controller {
 
+    
 	function __construct()
 	{
 		parent::__construct();
@@ -10,12 +11,16 @@ class Add extends CI_Controller {
 		$this->load->model(array('gallery_model','add_model'));
 	}
 	
-	
+	function finalize()
+    {
+	   $this->session->set_flashdata('message', 'Cazarea creata!');
+       redirect('home');
+	}
 
 	function index()
 	{
 		$data1['title'] = 'CazareinCarei.eu';
-		$data['jump'] = 'false';
+		$data2 = 'add_page';
 		if ($this->input->post('save')) {
 			
 			$this->add_model->add_cazare(
@@ -48,13 +53,13 @@ class Add extends CI_Controller {
 					
 					$this->session->set_userdata('CID', $CID);
 					
-			$data['jump'] = 'true';
+			$data2 = 'add_page_f';
 		}
 		
 		
 		
 		$this->load->view('header',$data1);
-		$this->load->view('add_page',$data);
+		$this->load->view($data2);
 		$this->load->view('footer');
 	}
 }
