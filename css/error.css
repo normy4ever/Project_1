@@ -1,0 +1,9 @@
+.form_error{
+	font-family:'Kreon', arial, serif;
+	font-size:12px;
+	text-decoration:none;
+	color:#FF0;
+	//float:right;
+	overflow:visible;
+}
+

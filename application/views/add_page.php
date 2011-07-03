@@ -7,9 +7,7 @@
             <li><a href="#" class="w2">Pasul 1</a></li>
             <li><a href="#" class="w2">Pasul 2</a></li>
             <li><a href="#" class="w2">Pasul 3</a></li>
-            <!--
-<li><a href="#" class="w2">Pasul 4</a></li>
--->
+
         </ul>
     
         <!-- panes -->
@@ -31,6 +29,7 @@
 				  'style'   	=> 'width:200px;',
             	);
 				echo form_input($data);
+				echo '<a class="form_error" id="name_error"> &nbsp;&nbsp;&nbsp;* Datele sunt necesare!</a>';
 				echo '</p><p>Descriea cazarii: ';
 				
 				$data = array(
@@ -51,6 +50,7 @@
 				  'style'   	=> 'width:50px;',
             	);
 				echo form_input($data);
+				echo '<a class="form_error" id="room_error"> &nbsp;&nbsp;&nbsp;* Datele sunt necesare!</a>';
 				echo '</p><p>Max. pers: ';
 				
 				$data = array(

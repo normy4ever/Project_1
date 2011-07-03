@@ -124,7 +124,7 @@
 
 				// get container for the wizard and initialize its exposing
 				var wizard = $("#wizard");
-				
+				$('.form_error').hide();  
 				// enable tabs that are contained within the wizard
 				$("ul.tabs", wizard).tabs("div.panes > div", function(event, index) {
 			
@@ -150,7 +150,10 @@
 			
 				// "next tab" button
 				$("a.stepforw", wizard).click(function() {
+					if(Application.Check_form())
+					{
 					api.next();
+					}
 				});
 			
 				// "previous tab" button
@@ -171,6 +174,42 @@
             
 				api.click(3);
 		},
+		
+		Check_form: function() { 
+			 			 			  	
+				  var name = $("input#cazare_name").val();  
+				  var res = '';
+					if (name == "") {  
+				  $("#name_error").show();  
+				  $("input#name").focus();  
+				  return false;  
+				}  
+									
+					$.ajax({
+					  url: "http://localhost/cazarecarei/index.php/add/validate_cname/"+name,
+					  async: false,
+					  dataType: "text",
+					  success: function(data){
+						//alert(data);
+						res=data;
+					  }
+					});
+				
+				//alert (res);
+				if(res=='User exists!'){
+				  $("#name_error").html('Aceasta nume exista deja!');  
+				  $("#name_error").show();  
+				  $("input#name").focus();  
+				  return false;  
+				} 						
+					var room = $("input#cazare_camere").val();  
+					if (room == "") {  
+				  $("#room_error").show();  
+				  $("input#room").focus();  
+				  return false;  
+				}  
+				return true;
+			}, 
 		
 		
 		Loggin_show: function() {
@@ -205,7 +244,7 @@ $(document).ready(function() {
 	Application.Gallerify();
 	Application.Add_move();
 	Application.Add_wizzard();
-   // Application.Jump();
+    /*Application.Check_form();*/
 });
 
 

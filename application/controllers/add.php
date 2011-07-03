@@ -16,6 +16,15 @@ class Add extends CI_Controller {
 	   $this->session->set_flashdata('message', 'Cazarea creata!');
        redirect('home');
 	}
+	
+	function validate_cname($x)
+	{
+		$name = $x;
+		log_message('info', 'ERRRRRRRRRRRRRRRRRRRR: '.$name);
+		$res = $this->add_model->check_duplicate_cname($name);
+		log_message('info', 'ERRRRRRRRRRRRRRRRRRRR: '.$res);
+		echo $res;
+	}
 
 	function index()
 	{

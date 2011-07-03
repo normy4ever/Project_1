@@ -28,6 +28,7 @@ echo meta($meta); */
 <link href="<?= base_url();?>css/list.css"  rel="stylesheet" type="text/css" />
 <link href="<?= base_url();?>css/details.css"  rel="stylesheet" type="text/css" />
 <link href="<?= base_url();?>css/add_wizzard.css"  rel="stylesheet" type="text/css" />
+<link href="<?= base_url();?>css/error.css"  rel="stylesheet" type="text/css" />
 
 
 

@@ -7,6 +7,18 @@ class Add_model extends CI_Model {
 		parent::__construct();
 	}
 	
+	function check_duplicate_cname($cname)
+	{
+		$res='No such User!';  
+		$this->db->select('*');
+		$this->db->where('name', $cname); 
+		$query= $this->db->get('cazarea');
+			if($query->num_rows() > 0)
+			{
+			   $res='User exists!';  
+			}
+		return $res;
+	}
 	
 	function add_cazare($name,$description,$room,$pers,$dists,$distc,$parcare,$cname,$caddress,$ctel,$cemail){
 		

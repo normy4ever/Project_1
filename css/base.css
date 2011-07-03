@@ -56,18 +56,18 @@ h4{
 }
 
 #footer{
-	position:absolute;
+	position:fixed;
    	bottom:0;
-    background-repeat:no-repeat;
 	width:960px;
 	height:40px;
     margin-top:50px;
+	overflow:auto;
 }
 
 #footer #opto_panel{
 	background-image:url(../img/copyright.png);
     background-repeat:no-repeat;
-    background-position:bottom;
+    background-position:center;
 	width:960px;
 	height:22px;
 	padding-top:10px;
