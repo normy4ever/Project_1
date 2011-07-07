@@ -7,13 +7,12 @@
     
     <div class="vertical">
     
+       <!-- root element for the scrollable elements -->
        <div class="instances">    
           <!-- first element. contains three rows -->
           <div>
              <!-- first row -->
-             <div class="inst_nr"><?= $item['cazare_id']; ?></div>
-             
-             
+             <div class="inst_nr"> 1. </div>
              <div class="instance">  
                 <!-- image -->
                 <? echo img('img/bigpic/stonehouse.jpg'); ?>    

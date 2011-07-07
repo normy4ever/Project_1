@@ -1,3 +1,4 @@
+
 <?php
 class Add_model extends CI_Model {
 	
@@ -48,6 +49,40 @@ class Add_model extends CI_Model {
 	
 	function add_extras($cid,$tv,$frigider,$internet,$grill,$apac){
 		
+		if($tv=='accept')
+		{
+			$tv=true;
+		}
+		if($frigider=='accept')
+		{
+			$frigider=true;
+		}
+		if($internet=='accept')
+		{
+			$internet=true;
+		}
+		if($grill=='accept')
+		{
+			$grill=true;
+		}
+		if($apac=='accept')
+		{
+			$apac=true;
+		}
+		
+		/*$array['tv']=$tv;
+		$array['frigider']=$frigider;
+		$array['internet']=$internet;
+		$array['grill']=$grill;
+		$array['apac']=$apac;
+		
+		foreach ($array as $row)
+			{
+			   if($row->value()='accept') $array[$row]='1';
+			}
+		*/
+		
+		
 		$data = array(
 					'cazare_id' => $cid,
 					'tv' => $tv,
@@ -61,7 +96,6 @@ class Add_model extends CI_Model {
 
 		if(!$this->db->insert('extras')) //There was a problem! 
 			return false;
-	
 	}
 	
 	function return_cid($value){

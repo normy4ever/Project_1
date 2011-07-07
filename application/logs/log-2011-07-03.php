@@ -5437,3 +5437,34 @@ DEBUG - 2011-07-03 18:53:30 --> File loaded: application/views/add_page_f.php
 DEBUG - 2011-07-03 18:53:30 --> File loaded: application/views/footer.php
 DEBUG - 2011-07-03 18:53:30 --> Final output sent to browser
 DEBUG - 2011-07-03 18:53:30 --> Total execution time: 0.9453
+DEBUG - 2011-07-03 19:01:19 --> Config Class Initialized
+DEBUG - 2011-07-03 19:01:19 --> Hooks Class Initialized
+DEBUG - 2011-07-03 19:01:19 --> Utf8 Class Initialized
+DEBUG - 2011-07-03 19:01:19 --> UTF-8 Support Enabled
+DEBUG - 2011-07-03 19:01:19 --> URI Class Initialized
+DEBUG - 2011-07-03 19:01:19 --> Router Class Initialized
+DEBUG - 2011-07-03 19:01:19 --> Output Class Initialized
+DEBUG - 2011-07-03 19:01:19 --> Security Class Initialized
+DEBUG - 2011-07-03 19:01:19 --> Input Class Initialized
+DEBUG - 2011-07-03 19:01:19 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-07-03 19:01:19 --> Language Class Initialized
+DEBUG - 2011-07-03 19:01:20 --> Loader Class Initialized
+DEBUG - 2011-07-03 19:01:20 --> Helper loaded: url_helper
+DEBUG - 2011-07-03 19:01:20 --> Helper loaded: html_helper
+DEBUG - 2011-07-03 19:01:20 --> Database Driver Class Initialized
+DEBUG - 2011-07-03 19:01:20 --> Session Class Initialized
+DEBUG - 2011-07-03 19:01:20 --> Helper loaded: string_helper
+DEBUG - 2011-07-03 19:01:20 --> A session cookie was not found.
+DEBUG - 2011-07-03 19:01:20 --> Session routines successfully run
+DEBUG - 2011-07-03 19:01:20 --> Controller Class Initialized
+DEBUG - 2011-07-03 19:01:20 --> Helper loaded: form_helper
+DEBUG - 2011-07-03 19:01:20 --> Helper loaded: file_helper
+DEBUG - 2011-07-03 19:01:20 --> Table Class Initialized
+DEBUG - 2011-07-03 19:01:20 --> Model Class Initialized
+DEBUG - 2011-07-03 19:01:20 --> Model Class Initialized
+DEBUG - 2011-07-03 19:01:20 --> Model Class Initialized
+DEBUG - 2011-07-03 19:01:20 --> File loaded: application/views/header.php
+DEBUG - 2011-07-03 19:01:20 --> File loaded: application/views/add_page.php
+DEBUG - 2011-07-03 19:01:20 --> File loaded: application/views/footer.php
+DEBUG - 2011-07-03 19:01:20 --> Final output sent to browser
+DEBUG - 2011-07-03 19:01:20 --> Total execution time: 0.7839

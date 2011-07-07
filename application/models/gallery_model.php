@@ -7,6 +7,7 @@ class Gallery_model extends CI_Model {
 	function __Construct()
 	{
 		parent::__construct();
+		$this->load->helper('directory');
 		$this->gallery_path = realpath(APPPATH . '../pictures');
 		$this->gallery_path_url = base_url().'pictures/';
 	}
@@ -15,7 +16,11 @@ class Gallery_model extends CI_Model {
 		
 		$this->gallery_path = $this->gallery_path.'/'.$nr;
 		
-	
+		if(!file_exists($this->gallery_path)){
+			mkdir($this->gallery_path);
+			mkdir($this->gallery_path . '/thumbs');
+		}
+		
 		$config = array(
 			'allowed_types' => 'jpg|jpeg|gif|png',
 			'upload_path' => $this->gallery_path,
@@ -77,12 +82,10 @@ class Gallery_model extends CI_Model {
 	
 	function get_images($nr) {
 		
-		$files = get_filenames($this->gallery_path.'/'.$nr.'/thumbs/');
+		$files = $this->gallery_path.'/'.$nr.'/thumbs/';
 		
-		echo $files;
-		
-		$images = array();
-		
+		$map = directory_map($files);
+		//echo $map[0];
 		/*foreach($files as $file)
 		{
 			$images []= array (
@@ -91,7 +94,7 @@ class Gallery_model extends CI_Model {
 			);
 		}*/
 		
-		return $files;
+		return $map;
 	}
 	
 }

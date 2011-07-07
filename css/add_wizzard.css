@@ -156,7 +156,7 @@ label.error {
 	float:right;
 }
 
-.stepback:hover, .stepforw:hover{
+.form_buttons a:hover{
 	text-shadow: #CCCCCC 2px 2px 2px !important;
 }
 
@@ -188,6 +188,14 @@ label.error {
 	width:auto;
 	display:block;
 	cursor:pointer;	
+	background:none;
+	outline:none;	
+	color:#8b1213;
+	font-family:'Kreon', arial, serif;
+	font-size:16px;
+	border:0;
+    margin:0;
+    padding:0;
 }
 
 .steptitle{
@@ -219,6 +227,30 @@ label.error {
 	border:1px solid #999;
 }
 
+#file_upload p{
+	color:white;
+}
+
+#file_upload div{
+	float:left;	
+}
+
+#temp_gallery{
+	margin-top:80px;
+	margin-left:15px;
+}
+
+#temp_gallery td{
+	padding:10px;	
+}
+
+#temp_gallery img{
+	-moz-box-shadow: 2px 3px 8px #333;
+	-webkit-box-shadow: 2px 3px 8px #333;
+	box-shadow: 2px 3px 8px #333;	
+}
+
+
 form input, form select, form textarea, #contact_upload input{
 	background:none;
 	background-color:#cfaf89;
@@ -236,4 +268,9 @@ form input, form select, form textarea, #contact_upload input{
 form p{
 	display:block;
 	width:100%;
+}
+
+#thinking{
+	display:none;
+	padding-left:225px;
 }

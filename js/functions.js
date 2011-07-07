@@ -1,6 +1,5 @@
 // JavaScript Document
 
-
 (function () {
 	
 	Application = {
@@ -27,7 +26,7 @@
 		},
 		
 		
-		Detail_show2: function() {
+		/*Detail_show2: function() {
 			// if the function argument is given to overlay,
 			// it is assumed to be the onBeforeLoad event listener
 			//$(":button").click(function() {
@@ -47,7 +46,7 @@
 			
 				});
 			//});
-		},
+		},*/
 		
 		
 		
@@ -118,6 +117,12 @@
 
 		},
 		
+		Thinking: function() {			
+			$('$up_it:submit').click(function() {
+			  $("#thinking").show();
+			  return true;
+			});
+		},
 		
 		Add_wizzard:function() {
 			$(function() {
@@ -218,7 +223,6 @@
 				$(".loggin[rel]").overlay({
 				
 					mask: '#789',
-					effect: 'apple',
 				
 					onBeforeLoad: function() {
 				
@@ -237,14 +241,14 @@
 
 
 $(document).ready(function() {
-	Application.Loggin_show();
+	//Application.Loggin_show();
 	Application.Home_navigator();
 	Application.List_navigator();
 	Application.Detail_show();
 	Application.Gallerify();
 	Application.Add_move();
 	Application.Add_wizzard();
-    /*Application.Check_form();*/
+    Application.Thinking();
 });
 
 
