@@ -5,7 +5,6 @@ class Login extends CI_Controller {
 		function __construct()
 		{
 			parent::__construct();
-			$this->load->helper(array('form'));
 			$this->load->library(array('form_validation','SimpleLoginSecure','encrypt'));			
         }
 		
@@ -70,13 +69,13 @@ class Login extends CI_Controller {
 						else
 						{
 							$this->session->set_flashdata('message', 'Incorrect password.');
-							redirect('login');
+							redirect('home');
 						}
 				}
 			}
 			else
 			{
-					$this->load->view('login_page');
+					$this->load->view('error_page');
 			}
 		}
 					

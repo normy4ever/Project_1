@@ -1,12 +1,12 @@
 <?php
 
-   // class Login_model extends Model
-    {
-
-        function __Construct()
-        {
-            parent::Model();
-        }
+class Login_model extends CI_Model
+{
+    function __Construct()
+	{
+		parent::__construct();
+	}
+	
         
         function get_users($lastname)
         {
@@ -31,6 +31,22 @@
             else
             { return false;}
         }
+		
+		 function check_uname($usern)
+        {
+			$res='No such account!';  
+			$this->db->select('*');
+			$this->db->where('user_email', $usern); 
+			$query= $this->db->get('ccusers');
+				if($query->num_rows() > 0)
+				{
+				   $res='Account exists!';  
+				}
+			return $res;
+			
+		}
+		
+		
     }
 
 ?>  

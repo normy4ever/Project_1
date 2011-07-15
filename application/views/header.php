@@ -47,19 +47,7 @@ echo meta($meta); */
 </head>
 
 <body>
-
-		<? 
-		
-			if($this->session->flashdata('message') ) { ?>
-        
-            <div id="inform" onClick="hide_flashdata();">
-               <div>
-                    <h2>Information</h2>              
-                            <p><? echo $this->session->flashdata('message');?></p>
-               </div>
-            </div>
-        <? } ?>
-
+    
 <div id="container">
 	<div class="transparency"> </div> <!-- transparent background -->
     <div id="header">
@@ -70,11 +58,11 @@ echo meta($meta); */
         <div id="login_panel">
 			<? if($this->session->userdata('logged_in'))
 				{
-				 echo anchor("login/logout", img(array('src'=>'img/logout_button.png','border'=>'0','alt'=>'Iesire')), array('class'=>'logout'));
+				 echo anchor("home/logout", img(array('src'=>'img/logout_button.png','border'=>'0','alt'=>'Iesire')), array('class'=>'logout'));
 				}
 				else
 				{
-				 echo anchor("login/", img(array('src'=>'img/login_button.png','border'=>'0','alt'=>'Logare')), array('class'=>'loggin','rel'=>'#overlay'));		
+				 echo anchor("home/login", img(array('src'=>'img/login_button.png','border'=>'0','alt'=>'Logare')), array('class'=>'modalInput','rel'=>'#login_window'));		
 				}
 			?>
         </div>
@@ -85,17 +73,109 @@ echo meta($meta); */
 				 	echo '<p>' .$this->session->userdata('user'). '</p>';
 				 echo '</div>';
 				}
-		?>
-  
-            <!-- overlayed element : login window -->
-            <div class="apple_overlay" id="overlay">
-                <!-- the external content is loaded inside this tag -->
-                <div class="contentWrap"></div>
-        	</div>
+		?>           
+     	<!-- overlayed element : login window -->
+        <!--<div id="login_show">
             
+            <div class="contentWrap">
+            	<? //$this->load->view('login_page'); ?>
+            </div>
+        </div> -->
+        
+        <div class="modal" id="login_window">    
+    		<p id="close_login"> X <p>
+            <p id="login_err"> </p>
+			<?php echo form_open('home/login'); ?>
+                <?php echo form_fieldset('Access cont');?>
+                
+                    <div class="textfield">
+                        <?=form_label('email', 'user_name')?>
+                        <?=form_error('user_name')?>
+                        <? $data = array(
+                              'name'        => 'user_name',
+                              'maxlength'   => '30',
+							  'type'	=>	'email',
+                              'required'   => 'required',
+                            );
+                        
+                        echo form_input($data)?>
+                    </div>
+                    
+                    <div class="textfield">
+                        <?=form_label('parola', 'user_pass')?>
+                        <?=form_error('user_pass')?>
+                        <? $data = array(
+                              'name'        => 'user_pass',
+                              'maxlength'   => '30',
+							  'type'	=>	'password',
+                              'required'   => 'required',
+                            );
+                        
+                        echo form_input($data)?>
+                    </div>
+                    
+                    <div class="buttons">
+                        <?=form_submit('login','Intra in cont')?>
+                    </div>
+                    
+                <?php echo form_fieldset_close()?>
+            <?php echo form_close();?>
             
+            <!-------------------------------------   Add user   -------------------------------------->
+            <p id="click_inreg"> Daca nu ai inca un cont aici poti inregistra !</p>
+            <?=form_open('home/create_account')?>
+				<?=form_fieldset('Creare cont')?>
+                
+                    <div class="textfield">
+                        <?=form_label('Adressa email', 'user_name')?>
+                        <?=form_error('user_name')?>
+                        <? $data = array(
+                              'name'        => 'user_name',
+                              'maxlength'   => '30',
+							  'type'	=>	'email',
+                              'required'   => 'required',
+                            );
+                        
+                        echo form_input($data)?>
+                    </div>
+                    
+                    <div class="textfield">
+                        <?=form_label('parola', 'user_pass1')?>
+                       <?=form_error('user_pass1')?>
+                        <? $data = array(
+                              'name'        => 'user_pass1',
+                              'maxlength'   => '30',
+							  'type'	=>	'password',
+                              'required'   => 'required',
+                            );
+                        
+                        echo form_input($data)?>
+                    </div>
+                    
+                    <div class="textfield">
+                        <?=form_label('parola', 'user_pass2')?>
+                       <?=form_error('user_pass2')?>
+                        <? $data = array(
+                              'name'        => 'user_pass2',
+                              'maxlength'   => '30',
+							  'type'	=>	'password',
+                              'required'   => 'required',
+                            );
+                        
+                        echo form_input($data)?>
+                    </div>
+                    
+                    <div class="buttons">
+                        <?=form_submit('create', 'Inregistrare')?>
+                    </div>
+                    
+                <?=form_fieldset_close()?>
+            <?=form_close();?>
+                   
+      </div>  <!--login window-->
+              
 	</div> <!--header-->
     
     <div id="contents">
     
-		
+	

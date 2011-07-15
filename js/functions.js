@@ -19,37 +19,9 @@
 		
 		Detail_show: function() {
 			$(".b a[rel]").overlay({effect: 'apple'});	
-			//$("button[rel]").overlay({mask: '#000', effect: 'apple'});	
-			//$(":button").click(function() {
-			//  alert('Handler for .click() called.');
-			//});
 		},
 		
-		
-		/*Detail_show2: function() {
-			// if the function argument is given to overlay,
-			// it is assumed to be the onBeforeLoad event listener
-			//$(":button").click(function() {
-				$(".b a[rel]").overlay({
-			
-					mask: 'darkred',
-					effect: 'apple',
-			
-					onBeforeLoad: function() {
-			
-						// grab wrapper element inside content
-						var wrap = this.getOverlay().find(".contentWrap");
-			
-						// load the page specified in the trigger
-						wrap.load(this.getTrigger().attr("href"));
-					}
-			
-				});
-			//});
-		},*/
-		
-		
-		
+	
 		
         Gallerify: function() {
 				$(".mini_pics").scrollable();
@@ -60,7 +32,7 @@
                 	if ($(this).hasClass("active")) { return; }
                 
                 	// calclulate large image's URL based on the thumbnail URL (flickr specific)
-                	var url = $(this).attr("src").replace("_t", "");
+                	var url = $(this).attr("src").replace("thumbs/", "");
                 
                 	// get handle to element that wraps the image and make it semi-transparent
                 	var wrap = $("#image_wrap").fadeTo("medium", 0.5);
@@ -180,6 +152,20 @@
 				api.click(3);
 		},
 		
+		Disable_form_submit: function() {
+			
+			 $('*').keypress(function(e)
+                {
+                    // if the key pressed is the enter key
+                    if (e.keyCode == 13)
+                    {
+                        alert("Da click pe pasul urmator");
+                        return false;
+                    }
+                });
+			
+		},
+		
 		Check_form: function() { 
 			 			 			  	
 				  var name = $("input#cazare_name").val();  
@@ -215,33 +201,102 @@
 				}  
 				return true;
 			}, 
+			
+			
+		Check_login: function() { 
+			 			 			  	
+				  var name = $("input#user_name").val();  
+				  var res = '';
+					/*if (name == "") {  
+				  $("#name_error").show();  
+				  $("input#name").focus();  
+				  return false;  
+				}  */
+									
+					$.ajax({
+					  url: "http://localhost/cazarecarei/index.php/home/validate_user/"+name,
+					  async: false,
+					  dataType: "text",
+					  success: function(data){
+						//alert(data);
+						res=data;
+					  }
+					});
+				
+				//alert (res);
+				if(res=='No such account!'){
+				  $("#login_err").html('Aceasta addressa nu este inregistrata!');  
+				  $("#login_err").show();  
+				  $("input#user_name").focus();  
+				  return false;  
+				} 						
+					
+			},	
 		
 		
 		Loggin_show: function() {
-				// if the function argument is given to overlay,
-				// it is assumed to be the onBeforeLoad event listener
-				$(".loggin[rel]").overlay({
-				
-					mask: '#789',
-				
-					onBeforeLoad: function() {
-				
-						// grab wrapper element inside content
-						var wrap = this.getOverlay().find(".contentWrap");
-				
-						// load the page specified in the trigger
-						wrap.load(this.getTrigger().attr("href"));
-					}	
-				});
-		}
-	};
 			
+				/*$("#close_login").click(function(){
+					
+					var e = jQuery.Event("keydown");
+					e.which = 27; // # Some key code value
+					$("#login_window").trigger('keypress(e)');
+
+				});*/
+				
+			
+				var triggers = $(".modalInput").overlay({
+
+				// some mask tweaks suitable for modal dialogs
+				mask: {
+					color: '#334455',
+					loadSpeed: 200,
+					opacity: 0.5
+				},
+			
+				closeOnClick: true
+			});
+			
+			$("#login_window form").submit(function(e) {
+				
+				if(Application.Check_login())
+					{
+						// close the overlay
+						triggers.eq(1).overlay().close();
+					
+						// get user input
+						var input = $("input", this).val();
+					
+						// do something with the answer
+						triggers.eq(1).html(input);
+					}
+				// do not submit the form
+				//return e.preventDefault();
+			});
+			
+			$("#login_window form").validator();
+			
+			/*$("a").click(function(f) {
+				if($.session("userdata")=="logged_in")
+				{}
+			}*/
+			
+			/*slide down*/
+			
+			$("#click_inreg").click(function () {
+					$("div").slideDown("slow",function(){
+						$("#login_window").css("height", "550px");
+					});
+				});
+		
+		}
+	}
 }) ();	
 
 
 
-$(document).ready(function() {
-	//Application.Loggin_show();
+$(document).ready(function(){
+	Application.Loggin_show();
 	Application.Home_navigator();
 	Application.List_navigator();
 	Application.Detail_show();
@@ -249,6 +304,7 @@ $(document).ready(function() {
 	Application.Add_move();
 	Application.Add_wizzard();
     Application.Thinking();
+	Application.Disable_form_submit();
 });
 
 

@@ -6,6 +6,7 @@ class Listall extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->library(array('table'));
+		$this->load->helper(array('file','text'));
 		$this->load->model('list_model');
 	}
 	
@@ -24,13 +25,13 @@ class Listall extends CI_Controller {
 				$extra = $this->list_model->return_extras_where($x);
 				//var_dump($extra);
 				foreach($value as $row => $data)
-					$data2['item'][$row]=$data;
+					$data2['item'][$x][$row]=$data;
 					
 				foreach($extra[$x] as $row => $data)
-					$data2['item'][$row]=$data;
+					$data2['item'][$x][$row]=$data;
 			}
 			
-		var_dump($data2);	
+		//var_dump($data2);	
 		
 		$this->load->view('header',$data1);
 		

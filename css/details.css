@@ -176,16 +176,18 @@ a.disabled {
 
 .detail_comfort{
     float: left;
-    line-height: 25px;
+    line-height: 22px;
 	list-style-type: none;
 	padding: 0;
+	margin-left:60px;
 }
 
 .detail_comfort li{
 	background-image:url(../img/extras_checkbox.png);
 	background-repeat:no-repeat;
 	background-position: left;
-	padding-left: 22px;	
+	padding-left: 22px;
+
 }
 
 .image-title {
@@ -221,6 +223,15 @@ a.disabled {
 	border-left: none;
 	list-style: none;
 	display: inline;
+}
+
+.small{
+	line-height:7px;
+	
+}
+
+.inf{
+	float:left
 }
 
 .cazare_nr{

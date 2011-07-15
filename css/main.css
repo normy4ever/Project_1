@@ -1,12 +1,8 @@
 /* CSS Document */
 
-#login_window{
-	width:100%;
-	height:auto;	
-}
 
 form{
-	width:350px;
+	width:auto;
 	margin:3em;
 	padding:1em;
 }
@@ -21,32 +17,37 @@ form{
 
 label
 {
-	width: 4em;
+
 	float: left;
 	text-align: right;
 	margin-right: 0.5em;
-	display: block
+	display: block;
 }
 
 fieldset
 {	
+	width:auto;
 	font-family:'Kreon', arial, serif;
 	font-size:18px;
-	color:#d7b9c9;
-	border: 1px solid #781351;
+	color:red;
+	border: 1px solid white;
 	margin:0 auto;
 	left:auto;
 	right:auto;
 	overflow:auto;
+	padding:20px;
 }
 
 
 .textfield input
 {
+	width:150px;
 	font-family:'Kreon', arial, serif;
 	font-size:13px;
 	color: #FFFFFF;
-	background: #ccaf8d;
-	border: 2px outset #d7b9c9;
+	background-color:#666666;
+	border: 1px outset #999999;
 	padding:1px;
 } 
+
+a:visited {color:#8b1213;}

@@ -111,7 +111,7 @@
 }
 
 .panes{
-	width:90%;
+	width:92%;
 	height:auto;
 }
 	
@@ -207,9 +207,10 @@ label.error {
 }
 
 #cazare_upload form{
-	width:75%;
+	width:650px;
 	margin-top:2px;
 	padding-top:0px;
+	
 }
 
 #extras_upload{
@@ -251,7 +252,7 @@ label.error {
 }
 
 
-form input, form select, form textarea, #contact_upload input{
+#wizard form input,#wizard form select,#wizard form textarea, #contact_upload input, #file_upload input{
 	background:none;
 	background-color:#cfaf89;
 	color:#8b1213;

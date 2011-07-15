@@ -131,6 +131,28 @@ h4{
 }
 
 
+#login_window{
+	background-color:#333333;
+	display:none;
+	width:425px;
+	height:280px;
+	padding:15px;
+	overflow:hidden;
+	text-align:left;
+	border:2px solid #333;
+	opacity:0.8;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	-moz-box-shadow: 0 0 50px #ccc;
+	-webkit-box-shadow: 0 0 50px #ccc;	
+}
+
+#login_window .buttons{
+	margin-top:15px;
+	background:none;
+}
+
+
 #login_panel{
 	width:100px;
 	height:25px;
@@ -154,15 +176,11 @@ h4{
 	margin-left:25px;
 }
 
-.loggin img:hover{
+.modalInput img:hover{
 	background-image:url(../img/login_button2.png);
 	background-repeat:no-repeat;		
 }
 
-.logout img:hover{
-	background-image:url(../img/logout_button2.png);
-	background-repeat:no-repeat;
-}
 
 
 #container{
@@ -468,3 +486,20 @@ h4{
 
 /*******************************************************/
 	
+	
+#close_login{
+	width:10px;
+	color:red;
+	float:right;
+	cursor:pointer;
+}
+
+#click_inreg{
+	width:300px;
+	color:#CCCCCC;
+	margin:0 auto;
+	left:auto;
+	right:auto;
+	font-weight:bold;
+	cursor:pointer;
+}

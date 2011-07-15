@@ -21,7 +21,7 @@ class Add_model extends CI_Model {
 		return $res;
 	}
 	
-	function add_cazare($name,$description,$room,$pers,$dists,$distc,$parcare,$cname,$caddress,$ctel,$cemail){
+	function add_cazare($name,$description,$room,$pers,$pret,$dists,$distc,$parcare,$cname,$caddress,$ctel,$cemail){
 		
 		$data = array(
 					'cazare_id' => '',
@@ -31,6 +31,7 @@ class Add_model extends CI_Model {
 					'add_date' => date('c'),
 					'nr_room' => $room,
 					'max_pers' => $pers,
+					'pret' => $pret,
 					'dist_strand' => $dists,
 					'dist_centru' => $distc,
 					'parcare_in' => $parcare,		

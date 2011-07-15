@@ -23,9 +23,9 @@ class Add extends CI_Controller {
 	function validate_cname($x)
 	{
 		$name = $x;
-		log_message('info', 'ERRRRRRRRRRRRRRRRRRRR: '.$name);
+		//log_message('info', 'ERRRRRRRRRRRRRRRRRRRR: '.$name);
 		$res = $this->add_model->check_duplicate_cname($name);
-		log_message('info', 'ERRRRRRRRRRRRRRRRRRRR: '.$res);
+		//log_message('info', 'ERRRRRRRRRRRRRRRRRRRR: '.$res);
 		echo $res;
 	}
 	
@@ -67,7 +67,7 @@ class Add extends CI_Controller {
 	}
 
 	function index()
-	{
+	{	
 		$data1['title'] = 'CazareinCarei.eu';
 		$data2 = 'add_page';
 		if ($this->input->post('save')) {
@@ -77,6 +77,7 @@ class Add extends CI_Controller {
 					$this->input->post('description'),
 					$this->input->post('room'),
 					$this->input->post('pers'),
+					$this->input->post('pret'),
 					$this->input->post('dists'),
 					$this->input->post('distc'),
 					$this->input->post('parcare'),
@@ -107,9 +108,14 @@ class Add extends CI_Controller {
 		
 		$data3['img_exists']='false';
 		
-		$this->load->view('header',$data1);
-		$this->load->view($data2,$data3);
-		$this->load->view('footer');
+		//if(isset($this->session->userdata('logged_in')))
+		//{
+			$this->load->view('header',$data1);
+			$this->load->view($data2,$data3);
+			$this->load->view('footer');
+		//}
+		//else
+		//{}
 	}
 }
 

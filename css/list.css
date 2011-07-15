@@ -35,9 +35,11 @@
 	float:left;
 	color:#8b1213;
 	margin-top:17px;
+	margin-right:5px;
 	font-size:25px;
 	font-weight:bold;
 	font-family:'Architects Daughter', arial, serif;
+	position:absolute;
 }
 
 .instance {
@@ -66,7 +68,7 @@
 	margin-right:25px;
 	height:165px;
 	width:220px;
-	border:1px solid green;
+	border:1px solid #8b1213;
 	-moz-box-shadow: 3px 5px 5px #666;
 	-webkit-box-shadow: 3px 5px 5px #666;
 	box-shadow: 3px 5px 5px #666;

@@ -51,7 +51,17 @@
             	);
 				echo form_input($data);
 				echo '<a class="form_error" id="room_error"> &nbsp;&nbsp;&nbsp;* Datele sunt necesare!</a>';
-				echo '</p><p>Max. pers: ';
+				echo '<a style="float:right;">Pret/noapte: ';
+				$data = array(
+				  'name'        => 'pret',
+				  'id'          => 'cazare_pret',
+				  'value'       => '',
+				  'maxlength'   => '10',
+				  'style'   	=> 'width:50px;margin-right:5px;',
+            	);
+				echo form_input($data);
+					
+				echo 'RON </a></p><p>Max. pers: ';
 				
 				$data = array(
 				  'name'        => 'pers',

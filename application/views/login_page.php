@@ -1,7 +1,7 @@
 <div id="login_window">    
     
-<?=form_open('login')?>
-	<?=form_fieldset('Login Form')?>
+<?php echo form_open('login'); ?>
+	<?php echo form_fieldset('Login Form');?>
 	
 		<div class="textfield">
 			<?=form_label('username', 'user_name')?>
