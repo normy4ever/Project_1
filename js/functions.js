@@ -108,8 +108,11 @@
 					/* now we are inside the onBeforeClick event */
 			
 					// ensure that the "terms" checkbox is checked.
-					var terms = $("#terms");
-					//if (index > 0 && !terms.get(0).checked)  {
+					//var terms = $("#terms");
+					if(index > 0 && !Application.Check_form())
+					{
+						return false;	
+					}
 //						terms.parent().addClass("error");
 //			
 //						// when false is returned, the user cannot advance to the next tab
@@ -117,7 +120,7 @@
 //					}
 			
 					// everything is ok. remove possible red highlight from the terms
-					terms.parent().removeClass("error");
+					//terms.parent().removeClass("error");
 				});
 			
 				
@@ -233,6 +236,13 @@
 					
 			},	
 		
+		Change_menu: function() { 
+			 			 			  	
+				$("#despre_b").click(function () {
+					$("#menu_change").html('#include file="../application/views/despre.php"')
+				});						
+					
+			},
 		
 		Loggin_show: function() {
 			
@@ -305,6 +315,7 @@ $(document).ready(function(){
 	Application.Add_wizzard();
     Application.Thinking();
 	Application.Disable_form_submit();
+	//Application.Change_menu();
 });
 
 

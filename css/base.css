@@ -285,7 +285,7 @@ h4{
 }
 
 #smallmenu{
-	font-size:13px;
+	font-size:14px;
 	font-family:'Kreon', arial, serif;
 	font-weight:200;
 	text-decoration:none;
@@ -353,7 +353,7 @@ h4{
 	height:345px;
 	background-position:center;
 	background-repeat:no-repeat;
-	margin-top:80px;
+	margin-top:40px;
 	margin-left:60px;
 	-moz-box-shadow: 4px 6px 10px #999999;
 	-webkit-box-shadow: 4px 6px 10px #999999;
@@ -502,4 +502,50 @@ h4{
 	right:auto;
 	font-weight:bold;
 	cursor:pointer;
+}
+
+#menu_change{
+	width:460px;
+	height:auto;
+	float:left;
+	margin-top:50px;
+}
+
+#link_list {
+	width:300px;
+	margin:0 auto;
+	left:auto;
+	right:auto;
+	font-family:'Neuton', arial, serif;
+	font-size:13px;
+	text-decoration:none;
+	color:#8b1213;
+	text-align:left;
+	margin-top:2px;
+	padding-left:60px;
+	line-height:24px;
+	list-style: none;
+	text-indent: -1em;
+}
+	
+#link_list a{
+	text-decoration:none;
+	color:#8b1213;
+}
+
+#link_list a:visited{
+	text-decoration:none;
+	color:#8b1213;
+}
+
+#contact_p{
+	width:70%;
+	margin:0 auto;
+	left:auto;
+	right:auto;	
+	overflow:auto;
+	text-align:center;
+	font-family:'Kreon', arial, serif;
+	font-size:12.5px;
+	color:#8b1213;
 }

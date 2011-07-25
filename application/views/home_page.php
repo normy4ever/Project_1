@@ -7,8 +7,11 @@
 					$this->table->clear();
 				?>
             </div>    
+            
     
-        
+       <?php if(!isset($despre)) 
+	   		{ ?> 
+       
         	<div id="select">
             	<div  class="filter_label">
                     <p> Camere disponibile (nr. Camere)</p>
@@ -21,10 +24,29 @@
                 
         	</div>
         	<div id="select_button"><input type="button" name="asd" value="Cauta"></div>
-        	
-            
-        
+      
+        <?php }
+		 else {
+			echo '<div id="menu_change">';
+            $list = array(
+					anchor('http://www.strandcarei.eu', '>> Strandul din Carei', 'title="Strandul din Carei"'),
+					anchor('http://ro.wikipedia.org/wiki/Carei', '>> Pagina wiki al orasului Carei', 'title="Pagina wiki al orasului Carei"'),
+					anchor('http://www.informatia-zilei.ro/sm/eveniment/castelul-karolyi-din-carei-este-un-adevarat-peles-al-ardealului/', '>> Articol despre Castelul Careian', 'title="Articol despre Castelul Careian"'),
+					anchor('http://www.turismland.ro/castelul-karolyi-din-carei-maramures/', '>> Castelul din Carei', 'title="Articol despre Castelul Careian"')
+					);
+
+			$attributes = array(
+								'class' => 'boldlist',
+								'id'    => 'link_list'
+								);
+			
+			echo ul($list, $attributes);
+           echo '</div>';	 
+        } ?>
+         
         </div> <!-- filter -->
+        
+        <p id="contact_p"> Pentru informatii,intrebari,sugestii contactati-ne pe <b>hello@cazareincarei.eu</b> </p>
         
         <div class="scrollable" id="emphasised">
             	<div class="items"> 

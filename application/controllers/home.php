@@ -90,7 +90,38 @@ class Home extends CI_Controller {
 	}
 
 
+	function despre()
+	{
+		$data2['despre']='list';
+		$data1['title'] = 'CazareinCarei.eu';
+		
+		$tmpl = array ( 'table_open'  => '<table border="0" cellpadding="2" cellspacing="1" class="menu_table">' );
 
+		$this->table->set_template($tmpl); 
+		
+		$this->table->add_row(anchor('', 'Cauta', 'title="Cauta"'));
+		$this->table->add_row(img('img/valaszto.png'));
+		if($this->session->userdata('user'))
+		{
+			$this->table->add_row(anchor('/add','Adauga cazare'));
+		}
+		else
+		{
+			$this->table->add_row(anchor('home/login','Adauga cazare',array('class'=>'modalInput','rel'=>'#login_window')));
+		}
+		$this->table->add_row('&nbsp');
+		$cell = array('id' => 'smallmenu');
+		$this->table->add_row(anchor('/listall','Listeeaza toate ofertele', $cell));
+		$this->table->add_row('&nbsp');
+		//$this->table->add_row('<li href="" id="despre_b" class = "smallmenu"> ASD </li>'); 
+		$this->table->add_row(anchor('home/despre','Despre Carei', $cell));
+		
+		$this->load->view('header',$data1);
+		
+			$this->load->view('home_page',$data2);
+		
+		$this->load->view('footer');	
+	}
 
 
 
@@ -116,10 +147,13 @@ class Home extends CI_Controller {
 		$cell = array('id' => 'smallmenu');
 		$this->table->add_row(anchor('/listall','Listeeaza toate ofertele', $cell));
 		$this->table->add_row('&nbsp');
-		$this->table->add_row(anchor('','Despre Carei', $cell));
+		//$this->table->add_row('<li href="" id="despre_b" class = "smallmenu"> ASD </li>'); 
+		$this->table->add_row(anchor('home/despre','Despre Carei', $cell));
 		
 		$this->load->view('header',$data1);
-		$this->load->view('home_page');
+		
+			$this->load->view('home_page');	
+		
 		$this->load->view('footer');
 	}
 }
