@@ -72,6 +72,7 @@ class SimpleLoginSecure
 		$data = array(
 					'user_email' => $user_email,
 					'user_pass' => $user_pass_hashed,
+					'user_tel' => 'NULL',
 					'user_date' => date('c'),
 					'user_modified' => date('c'),
 				);

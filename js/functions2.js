@@ -326,15 +326,15 @@
 
 
 $(document).ready(function(){
-	Application.Loggin_show();
-	Application.Home_navigator();
-	Application.List_navigator();
-	Application.Detail_show();
-	//Application.Gallerify();
-	Application.Add_move();
-	Application.Add_wizzard();
-    Application.Thinking();
-	Application.Disable_form_submit();
+	//Application.Loggin_show();
+	//Application.Home_navigator();
+	//Application.List_navigator();
+	//Application.Detail_show();
+	Application.Gallerify();
+	//Application.Add_move();
+	//Application.Add_wizzard();
+    //Application.Thinking();
+	//Application.Disable_form_submit();
 	//Application.Change_menu();
 });
 

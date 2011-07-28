@@ -10,9 +10,11 @@
             
     
        <?php if(!isset($despre)) 
-	   		{ ?> 
-       
+	   		{  
+       		echo form_open('listall');
+			?>
         	<div id="select">
+            
             	<div  class="filter_label">
                     <p> Camere disponibile (nr. Camere)</p>
                         <input type="range" name="test" min="0" max="10" value="1" />
@@ -23,9 +25,11 @@
                 </div>
                 
         	</div>
-        	<div id="select_button"><input type="button" name="asd" value="Cauta"></div>
-      
-        <?php }
+        	<div id="select_button"><input type="submit" name="asd" value="Cauta"></div>
+      		
+        <?php 
+			echo form_close();
+		}
 		 else {
 			echo '<div id="menu_change">';
             $list = array(

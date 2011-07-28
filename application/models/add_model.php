@@ -21,7 +21,7 @@ class Add_model extends CI_Model {
 		return $res;
 	}
 	
-	function add_cazare($name,$description,$room,$pers,$pret,$dists,$distc,$parcare,$cname,$caddress,$ctel,$cemail){
+	function add_cazare($name,$description,$room,$pers,$pret,$dists,$distc,$cname,$caddress,$ctel,$cemail){
 		
 		$data = array(
 					'cazare_id' => '',
@@ -33,8 +33,7 @@ class Add_model extends CI_Model {
 					'max_pers' => $pers,
 					'pret' => $pret,
 					'dist_strand' => $dists,
-					'dist_centru' => $distc,
-					'parcare_in' => $parcare,		
+					'dist_centru' => $distc,	
 					'contact_name' => $cname,
 					'cazare_address' => $caddress,
 					'contact_tel' => $ctel,
@@ -48,7 +47,7 @@ class Add_model extends CI_Model {
 			
 	}
 	
-	function add_extras($cid,$tv,$frigider,$internet,$grill,$apac){
+	function add_extras($cid,$tv,$frigider,$internet,$grill,$apac,$parcare){
 		
 		if($tv=='accept')
 		{
@@ -70,6 +69,11 @@ class Add_model extends CI_Model {
 		{
 			$apac=true;
 		}
+		if($parcare=='accept')
+		{
+			$parcare=true;
+		}
+
 		
 		/*$array['tv']=$tv;
 		$array['frigider']=$frigider;
@@ -90,7 +94,8 @@ class Add_model extends CI_Model {
 					'frigider' => $frigider,
 					'internet' => $internet,
 					'grill' => $grill,
-					'apacalda' => $apac
+					'apacalda' => $apac,
+					'parcare' => $parcare
 				);
 
 		$this->db->set($data); 

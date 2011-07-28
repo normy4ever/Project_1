@@ -1,4 +1,21 @@
-<div class="detail" id="dt">
+
+<link href="<?= base_url();?>css/details.css"  rel="stylesheet" type="text/css" />
+
+<link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Kreon' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Neuton:regular,italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js"></script>
+<script type="text/javascript" src="<?= base_url();?>js/functions2.js"></script>
+
+<div class="detail">
+<?php
+	$cid = $cazare_id;
+	$cname = $name;
+
+?>
+	
        <div class="cazare_nr"><?= $cid; ?>.</div> 	
        <div class="image-title"> <?= $cname; ?> </div>
     <!-- "previous page" action -->
@@ -43,54 +60,56 @@
     <div id="detail_text">
         <h2> Detalii</h2>
         
-        <p> <?= $item['description']; ?> </p>
+        <p> <?= $description; ?> </p>
         
-        <p>&nbsp;&nbsp;<h3>Camere disponibile: <?= $item['nr_room']; ?>     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<b>Pret/camera: <?= $item['pret']; ?>/Ron</b></h3></p>        
+        <p>&nbsp;&nbsp;<h3>Camere disponibile: <?= $nr_room; ?>     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<b>Pret/camera: <?= $pret; ?>/Ron</b></h3></p>        
         
         <div class="inf">
-            <p class="small">Nr. maxim de persoane: <?= $item['max_pers']; ?> </p>
-            <p class="small">Distanta de strand: <?= $item['dist_strand']; ?> </p>
-            <p class="small">Distanta de centru: <?= $item['dist_centru']; ?> </p>
-            <p class="small">Parcare in curte: <? if($item['parcare_in']==1){ echo 'Da';} else { echo 'Nu'; }; ?> </p>
-        </div>
-        <ul class="detail_comfort">
+          
+            <p class="small">Nr. maxim de persoane: <?= $max_pers; ?> </p>
+            <p class="small">Distanta de strand: <?= $dist_strand; ?> </p>
+            <p class="small">Distanta de centru: <?= $dist_centru; ?> </p>
+        </div>  <!--inf-->
+         <ul class="detail_comfort">
         <?
-			if($item['tv']==1)
+			if($tv = 1)
 			{
             	echo '<li>TV</li>';
             }
-            if($item['frigider']==1)
+            if($frigider==1)
 			{
             	echo '<li>Frigider</li>';
             }
-            if($item['internet']==1)
+            if($internet==1)
 			{
             	echo '<li>Internet</li>';
             }
 		?>
-        <!--</ul>
-        
-        <ul class="detail_comfort" style="margin-left:100px;">-->
+    
          <?
-		    if($item['grill']==1)
+		    if($grill==1)
 			{
             	echo '<li>Grill</li>';
             }
-            if($item['apacalda']==1)
+            if($apacalda==1)
 			{
             	echo '<li>Apa calda</li>';
+            }
+			 if($parcare_in==1)
+			{
+            	echo '<li>Parcare in curte</li>';
             }
 		?>
         </ul>
     
-    </div>
-    
+    </div>  <!--detail_text-->
+
     <div id="contact">
     	<ul> 
-        	<li>Ofertant: <?= $item[$key]['contact_name']; ?></li>
-         	<li>adressa: <?= $item[$key]['cazare_address']; ?></li>
-            <li>tel:<?= $item[$key]['contact_tel']; ?></li>
-            <li>email:<?= $item[$key]['contact_email']; ?></li>
+        	<li><h3>Ofertant:</h3> <?= $contact_name; ?></li>
+         	<li><h3>adressa:</h3> <?= $cazare_address; ?></li>
+            <li><h3>tel:</h3> <?= $contact_tel; ?></li>
+            <li><h3>email:</h3> <?= $contact_email; ?></li>
         </ul>
     </div>
                 

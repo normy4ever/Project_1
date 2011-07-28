@@ -91,14 +91,6 @@
 				  'style'   	=> 'width:80px;',
             	);
 				echo form_input($data);
-				echo '</p><p>Parcare in curte: ';
-				
-				$options = array(
-                  'true'  	 => 'Da',
-                  'false'    => 'Nu',
-                );
-
-				echo form_dropdown('parcare', $options, 'false');
 				echo '</p>';
 				?>	
 				<p class="form_buttons">
@@ -160,6 +152,16 @@
 				echo '<p class="checkbox">';
 				echo form_checkbox($data);
 				echo 'Intenet</p>';
+				$data = array(
+					'name'        => 'parcare',
+					'class'          => 'chbox',
+					'value'       => 'accept',
+					'checked'     => False,
+					);
+				
+				echo '<p class="checkbox">';
+				echo form_checkbox($data);
+				echo 'parcare in curte</p>';
 				?>
                 		
                 <p class="form_buttons">

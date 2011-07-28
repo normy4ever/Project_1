@@ -26,7 +26,7 @@ echo meta($meta); */
 <link href="<?= base_url();?>css/scrollable/navi.css"  rel="stylesheet" type="text/css" />
 <link href="<?= base_url();?>css/rangeinput.css"  rel="stylesheet" type="text/css" />
 <link href="<?= base_url();?>css/list.css"  rel="stylesheet" type="text/css" />
-<link href="<?= base_url();?>css/details.css"  rel="stylesheet" type="text/css" />
+
 <link href="<?= base_url();?>css/add_wizzard.css"  rel="stylesheet" type="text/css" />
 <link href="<?= base_url();?>css/error.css"  rel="stylesheet" type="text/css" />
 
@@ -40,8 +40,6 @@ echo meta($meta); */
 
 <script type="text/javascript" src="http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js"></script>
 <script type="text/javascript" src="<?= base_url();?>js/jquery.opacityrollover.js"></script>
-
-
 <script type="text/javascript" src="<?= base_url();?>js/functions.js"></script>
 
 </head>
@@ -166,7 +164,7 @@ echo meta($meta); */
                     </div>
                     
                     <div class="buttons">
-                        <?=form_submit('create', 'Inregistrare')?>
+                        <?=form_submit('create_acc', 'Inregistrare')?>
                     </div>
                     
                 <?=form_fieldset_close()?>

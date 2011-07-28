@@ -80,11 +80,10 @@ class Add extends CI_Controller {
 					$this->input->post('pret'),
 					$this->input->post('dists'),
 					$this->input->post('distc'),
-					$this->input->post('parcare'),
 					$this->input->post('cname'),
 					$this->input->post('caddress'),
 					$this->input->post('ctel'),
-					$this->input->post('$cemail'));
+					$this->input->post('cemail'));
 					
 					$name = $this->input->post('name');
 					
@@ -99,7 +98,8 @@ class Add extends CI_Controller {
 					$this->input->post('frigider'),
 					$this->input->post('internet'),
 					$this->input->post('grill'),
-					$this->input->post('apac'));
+					$this->input->post('apac'),
+					$this->input->post('parcare'));
 					
 					$this->session->set_userdata('CID', $CID);
 					

@@ -14,26 +14,38 @@ class Home extends CI_Controller {
 		{
 			// SET VALIDATION RULES
 			$this->form_validation->set_rules('user_name', 'username', 'required');
-			$this->form_validation->set_rules('user_pass', 'password', 'required');
+			$this->form_validation->set_rules('user_pass1', 'password', 'required');
+			$this->form_validation->set_rules('user_pass2', 'password', 'required');
 			$this->form_validation->set_error_delimiters('<em>','</em>');
 			
-			if($this->input->post('create'))
+			if($this->input->post('create_acc'))
 			{
 				if($this->form_validation->run())
 				{
 					$user_name = $this->input->post('user_name');
-					$user_pass = $this->input->post('user_pass');
+					$user_pass1 = $this->input->post('user_pass1');
+					$user_pass2 = $this->input->post('user_pass2');
 					
-					if($this->simpleloginsecure->create($user_name, $user_pass)) {
-							// user has been created
-							$this->session->set_flashdata('message', 'User created succesfully.');
-							redirect('');
-						}
-						else
-						{
-							$this->session->set_flashdata('message', 'User could not created.');
-							redirect('');
-						}
+					var_dump($user_pass1,$user_pass2);
+					
+					if($user_pass1=$user_pass2)
+					{
+						if($this->simpleloginsecure->create($user_name, $user_pass1)) {
+								// user has been created
+								$this->session->set_flashdata('message', 'User created succesfully.');
+								redirect('home');
+							}
+							else
+							{
+								$this->session->set_flashdata('message', 'User could not created.');
+								redirect('error');
+							}
+					}
+					else
+					{
+							$this->session->set_flashdata('message', 'Parolele trebuie sa fie acelasi !');
+							redirect('error');
+					}
 				}
 			}
 		}

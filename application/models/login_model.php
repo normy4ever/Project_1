@@ -11,8 +11,8 @@ class Login_model extends CI_Model
         function get_users($lastname)
         {
             $this->load->database();
-            $this->db->select('ccusers');
-            $this->db->from('ccname');
+            $this->db->select('user_email');
+            $this->db->from('ccusers');
             $query = $this->db->get();
             return $query->row();
         }
@@ -20,10 +20,10 @@ class Login_model extends CI_Model
               
         function check_login_data($username, $password)
         {    
-            $query = $this->db->select('ccname, ccpass');
+            $query = $this->db->select('user_email, user_pass');
             $query = $this->db->from('ccusers');
-            $query = $this->db->where('ccname', $username);
-            $query = $this->db->where('ccpass', $password);
+            $query = $this->db->where('user_email', $username);
+            $query = $this->db->where('user_pass', $password);
             $query = $this->db->get();
             
             if($query->num_rows() > 0)
@@ -40,7 +40,7 @@ class Login_model extends CI_Model
 			$query= $this->db->get('ccusers');
 				if($query->num_rows() > 0)
 				{
-				   $res='Account exists!';  
+				   $res='Acest cont exista deja!';  
 				}
 			return $res;
 			
@@ -48,4 +48,4 @@ class Login_model extends CI_Model
 		
 		
     }
-?>  
+?>
