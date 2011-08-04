@@ -1,3 +1,4 @@
+<!--<div id="home_link"><? echo anchor('home'); ?></div>-->
 <div>   
     
     <div id="wizard">
@@ -19,7 +20,7 @@
 				$attributes = array('id' => 'save_cazare');
                 echo form_open('add',$attributes);
 				
-				echo '<p> Numele cazarii: ';
+				echo '<p> Numele cazarii: * ';
 				
 				$data = array(
 				  'name'        => 'name',
@@ -27,6 +28,7 @@
 				  'value'       => '',
 				  'maxlength'   => '200',
 				  'style'   	=> 'width:200px;',
+				  'required'    => 'required'
             	);
 				echo form_input($data);
 				echo '<a class="form_error" id="name_error"> &nbsp;&nbsp;&nbsp;* Datele sunt necesare!</a>';
@@ -40,7 +42,7 @@
 				  'cols' 		=> '72',
             	);
 				echo form_textarea($data);
-				echo '</p><p>Nr. camere: ';
+				echo '</p><p>Nr. camere: * ';
 				
 				$data = array(
 				  'name'        => 'room',
@@ -48,20 +50,22 @@
 				  'value'       => '',
 				  'maxlength'   => '5',
 				  'style'   	=> 'width:50px;',
+				  'required'    => 'required'
             	);
 				echo form_input($data);
 				echo '<a class="form_error" id="room_error"> &nbsp;&nbsp;&nbsp;* Datele sunt necesare!</a>';
-				echo '<a style="float:right;">Pret/noapte: ';
+				echo '<p>Pret/noapte: * ';
 				$data = array(
 				  'name'        => 'pret',
 				  'id'          => 'cazare_pret',
 				  'value'       => '',
 				  'maxlength'   => '10',
 				  'style'   	=> 'width:50px;margin-right:5px;',
+				  'required'    => 'required'
             	);
 				echo form_input($data);
 					
-				echo 'RON </a></p><p>Max. pers: ';
+				echo ' RON</p><p>Max. pers: ';
 				
 				$data = array(
 				  'name'        => 'pers',
@@ -201,6 +205,7 @@
 				  'id'          => 'contact_tel',
 				  'value'       => '',
 				  'maxlength'   => '30',
+				  'type'		=> 'number',
 				  'style'   	=> 'width:100px;',
             	);
 				echo form_input($data);
@@ -211,6 +216,7 @@
 				  'id'          => 'contact_email',
 				  'value'       => '',
 				  'maxlength'   => '30',
+				  'type'		=> 'email',
 				  'style'   	=> 'width:100px;',
             	);
 				echo form_input($data);

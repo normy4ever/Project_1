@@ -70,40 +70,47 @@ class Add extends CI_Controller {
 	{	
 		$data1['title'] = 'CazareinCarei.eu';
 		$data2 = 'add_page';
-		if ($this->input->post('save')) {
-			
-			$this->add_model->add_cazare(
-					$this->input->post('name'),
-					$this->input->post('description'),
-					$this->input->post('room'),
-					$this->input->post('pers'),
-					$this->input->post('pret'),
-					$this->input->post('dists'),
-					$this->input->post('distc'),
-					$this->input->post('cname'),
-					$this->input->post('caddress'),
-					$this->input->post('ctel'),
-					$this->input->post('cemail'));
-					
-					$name = $this->input->post('name');
-					
-					$CID = $this->add_model->return_cid($name);	
-					//show_error($CID);
-					
-					//show_error($this->input->post('tv').$this->input->post('internet'));
-					
-			$this->add_model->add_extras(
-					$CID,
-					$this->input->post('tv'),
-					$this->input->post('frigider'),
-					$this->input->post('internet'),
-					$this->input->post('grill'),
-					$this->input->post('apac'),
-					$this->input->post('parcare'));
-					
-					$this->session->set_userdata('CID', $CID);
-					
-			$data2 = 'add_page_f';
+		if ($this->session->userdata('user'))
+		{
+			if ($this->input->post('save'))
+			{	
+				$this->add_model->add_cazare(
+						$this->input->post('name'),
+						$this->input->post('description'),
+						$this->input->post('room'),
+						$this->input->post('pers'),
+						$this->input->post('pret'),
+						$this->input->post('dists'),
+						$this->input->post('distc'),
+						$this->input->post('cname'),
+						$this->input->post('caddress'),
+						$this->input->post('ctel'),
+						$this->input->post('cemail'));
+						
+						$name = $this->input->post('name');
+						
+						$CID = $this->add_model->return_cid($name);	
+						//show_error($CID);
+						
+						//show_error($this->input->post('tv').$this->input->post('internet'));
+						
+				$this->add_model->add_extras(
+						$CID,
+						$this->input->post('tv'),
+						$this->input->post('frigider'),
+						$this->input->post('internet'),
+						$this->input->post('grill'),
+						$this->input->post('apac'),
+						$this->input->post('parcare'));
+						
+						$this->session->set_userdata('CID', $CID);
+						
+				$data2 = 'add_page_f';
+			}
+		}
+		else
+		{
+			redirect('home/login');
 		}
 		
 		$data3['img_exists']='false';

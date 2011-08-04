@@ -34,13 +34,13 @@ class Login_model extends CI_Model
 		
 		 function check_uname($usern)
         {
-			$res='No such account!';  
+			$res='not';  
 			$this->db->select('*');
 			$this->db->where('user_email', $usern); 
 			$query= $this->db->get('ccusers');
 				if($query->num_rows() > 0)
 				{
-				   $res='Acest cont exista deja!';  
+				   $res='exists';  
 				}
 			return $res;
 			

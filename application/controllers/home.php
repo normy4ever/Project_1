@@ -14,8 +14,8 @@ class Home extends CI_Controller {
 		{
 			// SET VALIDATION RULES
 			$this->form_validation->set_rules('user_name', 'username', 'required');
-			$this->form_validation->set_rules('user_pass1', 'password', 'required');
-			$this->form_validation->set_rules('user_pass2', 'password', 'required');
+			$this->form_validation->set_rules('user_pass', 'password', 'required');
+			$this->form_validation->set_rules('check', 'password', 'required');
 			$this->form_validation->set_error_delimiters('<em>','</em>');
 			
 			if($this->input->post('create_acc'))
@@ -23,32 +23,24 @@ class Home extends CI_Controller {
 				if($this->form_validation->run())
 				{
 					$user_name = $this->input->post('user_name');
-					$user_pass1 = $this->input->post('user_pass1');
-					$user_pass2 = $this->input->post('user_pass2');
+					$user_pass = $this->input->post('user_pass');
 					
-					var_dump($user_pass1,$user_pass2);
 					
-					if($user_pass1=$user_pass2)
-					{
-						if($this->simpleloginsecure->create($user_name, $user_pass1)) {
+						if($this->simpleloginsecure->create($user_name, $user_pass)) {
 								// user has been created
-								$this->session->set_flashdata('message', 'User created succesfully.');
+								$this->session->set_flashdata('message', 'Cont creat.');
 								redirect('home');
 							}
 							else
 							{
-								$this->session->set_flashdata('message', 'User could not created.');
-								redirect('error');
+								$this->session->set_flashdata('message', 'Aceasta adressa email e deja inregistrata!');
+								redirect('home');
 							}
-					}
-					else
-					{
-							$this->session->set_flashdata('message', 'Parolele trebuie sa fie acelasi !');
-							redirect('error');
-					}
+					
 				}
 			}
 		}
+		
 		
 	function login()
         {
@@ -58,7 +50,6 @@ class Home extends CI_Controller {
 			$this->form_validation->set_rules('user_pass', 'password', 'required');
 			$this->form_validation->set_error_delimiters('<em>','</em>');
 			
-			// has the form been submitted and with valid form info (not empty values)
 			
 			if($this->input->post('login'))
 			{
@@ -67,31 +58,58 @@ class Home extends CI_Controller {
 					$user_name = $this->input->post('user_name');
 					$user_pass = $this->input->post('user_pass');
 					
-					if($this->simpleloginsecure->login($user_name, $user_pass)) {
+					//$user_name=str_replace('x-x', '@' , $user_name);
+					
+					if($this->simpleloginsecure->login($user_name, $user_pass))
+						{
 							// user has been logged in
-							$this->session->set_flashdata('message', 'USER LOGGED IN.');
+							//$this->session->set_flashdata('message', 'USER LOGGED IN.');
 							redirect('');
+							//return true;
 						}
 						else
 						{
-							$this->session->set_flashdata('message', 'Incorrect password.');
-							redirect('home');
+							//return false;
+							//redirect('');
+							$this->session->set_flashdata('message', 'Date gresite! Mai incearca.');
+							redirect('');
+							
 						}
 				}
 			}
 			else
 			{
-					$this->load->view('login_page');
+					//return false;
+					$this->load->view('error');
 			}
 		}
 		
+	
+	function prelogin($user_name, $user_pass)
+        {
+			$user_name=str_replace('x-x', '@' , $user_name);      
+			//echo $user_name;      		
+			if($this->simpleloginsecure->login($user_name, $user_pass))
+				{
+					return true;
+				}
+				else
+				{
+
+					return "nope";
+					
+				}
+		}
+	
 		
 		
 	function validate_user($x)
 	{
-		$name = $x;
+		
+		$name=str_replace('x-x', '@' , $x); 
 		$res = $this->login_model->check_uname($name);
-		echo $res;		
+		echo $res;
+		return $res;		
 	}	
 		
 		

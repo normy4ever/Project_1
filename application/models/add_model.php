@@ -95,7 +95,7 @@ class Add_model extends CI_Model {
 					'internet' => $internet,
 					'grill' => $grill,
 					'apacalda' => $apac,
-					'parcare' => $parcare
+					'parcare_in' => $parcare
 				);
 
 		$this->db->set($data); 

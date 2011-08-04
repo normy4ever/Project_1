@@ -263,17 +263,45 @@
 				});						
 					
 			},
+			
+		Validate_forms: function() { 
+									
+			// Regular Expression to test whether the value is valid
+			$.tools.validator.fn("[type=time]", "Please supply a valid time", function(input, value) { 
+				return /^\d\d:\d\d$/.test(value);
+			});
+			
+			$.tools.validator.fn("[data-equals]", "Parolele nu-s acelasi", function(input) {
+				var name = input.attr("data-equals"),
+					 field = this.getInputs().filter("[name=" + name + "]"); 
+				return input.val() == field.val() ? true : [name]; 
+			});
+			
+			$.tools.validator.fn("[minlength]", function(input, value) {
+				var min = input.attr("minlength");
+				
+				return value.length >= min ? true : {     
+					en: "Please provide at least " +min+ " character" + (min > 1 ? "s" : ""),
+					fi: "Kentän minimipituus on " +min+ " merkkiä" 
+				};
+			});
+			
+			$.tools.validator.localizeFn("[type=time]", {
+				en: 'Please supply a valid time',
+				fi: 'Virheellinen aika'		
+			});
+			
+			
+			$("#save_cazare").validator({ 
+				position: 'top left', 
+				offset: [-12, 0],
+				message: '<div><em/></div>' // em element is the arrow
+			});					
+				
+		},
 		
 		Loggin_show: function() {
-			
-				/*$("#close_login").click(function(){
 					
-					var e = jQuery.Event("keydown");
-					e.which = 27; // # Some key code value
-					$("#login_window").trigger('keypress(e)');
-
-				});*/
-				
 			
 				var triggers = $(".modalInput").overlay({
 
@@ -287,7 +315,9 @@
 				closeOnClick: true
 			});
 			
-			$("#login_window form").submit(function(e) {
+			
+			
+		/*	$("#login_window form").submit(function(e) {
 				
 				if(Application.Check_login())
 					{
@@ -305,19 +335,63 @@
 			});
 			
 			$("#login_window form").validator();
-			
-			/*$("a").click(function(f) {
-				if($.session("userdata")=="logged_in")
-				{}
-			}*/
-			
-			/*slide down*/
+			*/
 			
 			$("#click_inreg").click(function () {
 					$("div").slideDown("slow",function(){
 						$("#login_window").css("height", "550px");
 					});
 				});
+		
+		},
+		
+		
+		Loggin_validate: function() {
+			
+			$("#login_form").validator();
+			
+			$.tools.validator.fn("[data-equals]", "Parolele nu-s acelasi", function(input) {
+				var name = input.attr("data-equals"),
+					 field = this.getInputs().filter("[name=" + name + "]"); 
+				return input.val() == field.val() ? true : [name]; 
+			});
+
+			$("#create_form").validator({ 
+				position: 'top left', 
+				offset: [-12, 0],
+				message: '<div><em/></div>' // em element is the arrow
+			});	
+			
+		},
+		
+		Account_validate: function() {
+							
+			// initialize validator and add a custom form submission logic
+		$("#login_window").validator().submit(function(e) {
+		
+			var form = $(this);
+			var name = $("#user_name").val();
+		
+			// client-side validation OK.
+			if (!e.isDefaultPrevented()) {
+
+			// submit with AJAX
+			$.getJSON("http://localhost/cazarecarei/index.php/home/validate_user/" + name, function(json) {
+	
+				// everything is ok. (server returned true)
+				if (json === true)  {
+					form.load("success.php");
+	
+				// server-side validation failed. use invalidate() to show errors
+				} else {
+					form.data("validator").invalidate(json);
+				}
+			});
+	
+			// prevent default form submission logic
+			e.preventDefault();
+			}
+		});
 		
 		}
 	}
@@ -327,6 +401,7 @@
 
 $(document).ready(function(){
 	Application.Loggin_show();
+	Application.Loggin_validate();
 	Application.Home_navigator();
 	Application.List_navigator();
 	Application.Detail_show();
@@ -334,7 +409,7 @@ $(document).ready(function(){
 	Application.Add_move();
 	Application.Add_wizzard();
     Application.Thinking();
-	Application.Disable_form_submit();
+	Application.Validate_forms();
 	//Application.Change_menu();
 });
 

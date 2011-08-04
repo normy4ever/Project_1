@@ -132,7 +132,7 @@ h4{
 
 
 #login_window{
-	background-color:#333333;
+	background-color:#111111;
 	display:none;
 	width:425px;
 	height:280px;
@@ -147,9 +147,9 @@ h4{
 	-webkit-box-shadow: 0 0 50px #ccc;	
 }
 
-#login_window .buttons{
-	margin-top:15px;
-	background:none;
+#login_window input[type="submit"]{
+	margin-top:20px;
+	color:#8b1213;
 }
 
 
@@ -481,7 +481,7 @@ h4{
 	
 #close_login{
 	width:10px;
-	color:red;
+	color:#CC1213;
 	float:right;
 	cursor:pointer;
 }
@@ -538,7 +538,7 @@ h4{
 	overflow:auto;
 	text-align:center;
 	font-family:'Kreon', arial, serif;
-	font-size:12.5px;
+	font-size:14.5px;
 	color:#8b1213;
 }
 

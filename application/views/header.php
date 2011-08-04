@@ -30,8 +30,6 @@ echo meta($meta); */
 <link href="<?= base_url();?>css/add_wizzard.css"  rel="stylesheet" type="text/css" />
 <link href="<?= base_url();?>css/error.css"  rel="stylesheet" type="text/css" />
 
-
-
 <link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Kreon' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Neuton:regular,italic' rel='stylesheet' type='text/css'>
@@ -65,6 +63,7 @@ echo meta($meta); */
 			?>
         </div>
         
+                
         <? if($this->session->userdata('user'))
 				{
 				 echo '<div id="user_panel">';
@@ -72,28 +71,27 @@ echo meta($meta); */
 				 echo '</div>';
 				}
 		?>           
-     	<!-- overlayed element : login window -->
-        <!--<div id="login_show">
-            
-            <div class="contentWrap">
-            	<? //$this->load->view('login_page'); ?>
-            </div>
-        </div> -->
+     	
+        
         
         <div class="modal" id="login_window">    
-    		<p id="close_login"> X <p>
-            <p id="login_err"> </p>
-			<?php echo form_open('home/login'); ?>
-                <?php echo form_fieldset('Access cont');?>
+    		<p class="close" id="close_login"> X <p>
+            
+			<?php 
+				 	$atr=array('id' => 'login_form');
+					echo form_open('home/login', $atr);
+                	echo form_fieldset('Access cont');
+			?>
                 
                     <div class="textfield">
-                        <?=form_label('email', 'user_name')?>
+                        <?=form_label('email &nbsp;', 'user_name');?>
                         <?=form_error('user_name')?>
                         <? $data = array(
                               'name'        => 'user_name',
                               'maxlength'   => '30',
 							  'type'	=>	'email',
                               'required'   => 'required',
+							  'id'   		=> 'user_name'
                             );
                         
                         echo form_input($data)?>
@@ -107,6 +105,7 @@ echo meta($meta); */
                               'maxlength'   => '30',
 							  'type'	=>	'password',
                               'required'   => 'required',
+							  'id'   		=> 'user_pass'
                             );
                         
                         echo form_input($data)?>
@@ -120,44 +119,50 @@ echo meta($meta); */
             <?php echo form_close();?>
             
             <!-------------------------------------   Add user   -------------------------------------->
-            <p id="click_inreg"> Daca nu ai inca un cont aici poti inregistra !</p>
-            <?=form_open('home/create_account')?>
-				<?=form_fieldset('Creare cont')?>
+            <p id="click_inreg"> Creare cont</p>
+            <?php 
+				 	$atr=array('id' => 'create_form');
+            		echo form_open('home/create_account', $atr);
+					echo form_fieldset('Creare cont');
+			?>
                 
                     <div class="textfield">
-                        <?=form_label('Adressa email', 'user_name')?>
+                        <?=form_label('adressa email', 'user_name')?>
                         <?=form_error('user_name')?>
                         <? $data = array(
                               'name'        => 'user_name',
                               'maxlength'   => '30',
-							  'type'	=>	'email',
-                              'required'   => 'required',
+							  'type'		=> 'email',
+                              'required'    => 'required'							  
                             );
                         
                         echo form_input($data)?>
                     </div>
                     
                     <div class="textfield">
-                        <?=form_label('parola', 'user_pass1')?>
+                        <?=form_label('parola', 'Parola minim 5 caractere!')?>
                        <?=form_error('user_pass1')?>
                         <? $data = array(
-                              'name'        => 'user_pass1',
+                              'name'        => 'user_pass',
                               'maxlength'   => '30',
-							  'type'	=>	'password',
-                              'required'   => 'required',
+							  'type'		=> 'password',
+                              'required'   	=> 'required',
+							  'minlength'	=> '5'
                             );
                         
                         echo form_input($data)?>
                     </div>
                     
                     <div class="textfield">
-                        <?=form_label('parola', 'user_pass2')?>
+                        <?=form_label('parola', 'Confirma parola')?>
                        <?=form_error('user_pass2')?>
                         <? $data = array(
-                              'name'        => 'user_pass2',
+                              'name'        => 'check',
                               'maxlength'   => '30',
-							  'type'	=>	'password',
-                              'required'   => 'required',
+							  'type'		=> 'password',
+                              'required'   	=> 'required',
+							  'minlength'	=> '5',
+							  'data-equals' => 'user_pass'
                             );
                         
                         echo form_input($data)?>
@@ -171,9 +176,17 @@ echo meta($meta); */
             <?=form_close();?>
                    
       </div>  <!--login window-->
-              
+     
+     
 	</div> <!--header-->
     
     <div id="contents">
-    
+    <div id="message">     
+     <?php 	
+			if($this->session->flashdata('message'))
+			{	
+				echo $this->session->flashdata('message');
+			}
+		?>     
+     </div>
 	

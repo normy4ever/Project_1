@@ -22,7 +22,8 @@ class Login extends CI_Controller {
 					$user_name = $this->input->post('user_name');
 					$user_pass = $this->input->post('user_pass');
 					
-					if($this->simpleloginsecure->create($user_name, $user_pass)) {
+					if($this->simpleloginsecure->create($user_name, $user_pass))
+						{
 							// user has been created
 							$this->session->set_flashdata('message', 'User created succesfully.');
 							redirect('');
