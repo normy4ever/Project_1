@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+	  
 
 <title><?= $title ?></title>
 <?
@@ -32,7 +33,7 @@ echo meta($meta); */
 
 <link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Kreon' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Neuton:regular,italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Neuton' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
 

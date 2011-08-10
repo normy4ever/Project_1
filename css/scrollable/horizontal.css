@@ -29,7 +29,6 @@
 }
 
 .items .sitem {
-	
 	float:left;
 	width:710px;
 }
@@ -38,7 +37,7 @@
 .scrollable img {
 	float:left;
 	background-color:#fff;
-	width:100%;
+	width:710px;
 	height:auto;
 	
 }

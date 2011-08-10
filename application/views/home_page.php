@@ -50,44 +50,44 @@
          
         </div> <!-- filter -->
         
-        <p id="contact_p"> Pentru informatii,intrebari,sugestii contactati-ne pe <b>hello@cazareincarei.eu</b> </p>
+        <p id="contact_p"> Pentru informații,întrebări,sugestii contactați-ne pe <b>hello@cazareincarei.eu</b> </p>
         
         <div class="scrollable" id="emphasised">
             	<div class="items"> 
    
                       <!-- 1-5 --> 
                       <div class="sitem"> 
-                         <? echo img('img/bigpic/stonehouse.jpg'); ?>                  
+                         <? echo img('img/bigpic/casa_falcusan.jpg'); ?>                  
                             
                           <div class="bigpic_info"></div>
                           <div class="bigpic_info_text">
-                         	<p class="advert_title"> Casa de piatra </p>
+                         	<p class="advert_title"> Casa Fălcușan </p>
                                     <ul>
-                                        <li>pana la 10 persoane</li>
-                                        <li>full confort</li>
-                                        <li>grill + TV</li>
+                                        <li>până la 12 persoane</li>
+                                        <li>apă caldă</li>
+                                        <li>TV</li>
                                     </ul>
                             <br /><br /><br /><br /><br />
-                            <p class="highlight">Pret: 50 RON/pers </p>
+                            <p class="highlight">Preț: 50 RON/cameră </p>
                             <br />
-                            <p style="color:#BBBBBB;margin-left:48px;"> Click pt. Detalii </p>
+                            <a rel="#overlay" href="http://localhost/cazarecarei/index.php/detail/get_id/75" style="color:#BBBBBB;margin-left:48px;"> Detalii </a>
                          </div>
                       </div> 
                       
-                      <!-- 5-10 --> 
-                      <div class="sitem"> 
+                      
+                     <!-- <div class="sitem"> 
                         <? echo img('img/bigpic/beach.jpg'); ?> 
                        	<div class="bigpic_info">
-                         	<p> Informatii</p>
+                         	<p> Informații</p>
                          </div>
                       </div> 
                       
-                      <!-- 10-15 --> 
+                      
                       <div class="sitem"> 
                          <? echo img('img/bigpic/almak.jpg'); ?> 
                       	 <div class="bigpic_info">
-                         	<p> Informatii</p>
-                         </div>
+                         	<p> Informații</p>
+                         </div>-->
                   </div> 
             	</div>
          </div> <!-- scrollable --><!-- emphasised -->

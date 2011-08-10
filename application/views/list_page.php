@@ -15,9 +15,6 @@
 				$cid=$item[$key]['cazare_id'];
 				$cname=$item[$key]['name'];
 			
-			
-			
-			//var_dump($item);
 		  ?>
           
           <div>
@@ -27,15 +24,14 @@
              
              <div class="instance">  
                 <!-- image -->
+                <div id="listed_img">
+                
                 <? 
 					$dir = get_filenames('pictures/'.$cid);
 					
-					//var_dump($dir);
 					$image_properties = array(
 							  'src' => 'pictures/'.$cid.'/'.$dir[0],
 							  'alt' => $cname,
-							  'width' => '220',
-							  'height' => '165',
 							  'title' => $cname,
 					);
 					
@@ -48,13 +44,13 @@
 						$image_properties2 = array(
 							  'src' => 'img/no_img.png',
 							  'alt' => $cname,
-							  'width' => '220',
-							  'height' => '165',
 							  'title' => $cname,
+							  'style' => 'padding-top:30px;'
 							);
 						echo img($image_properties2);
 					}
 				?>    
+                </div>
                 <!-- title -->
                 <div class="instance_sample">
                 	<div class="a">
@@ -65,7 +61,7 @@
                         </p>
                     </div>
                     <div class="b"> 
-                    	<a href="detail/get_id/<?=$cid?>" rel="#overlay" title="Toate informatiile despre aceasta cazare"> Detalii </a>  <a href="" title="localizeaza"> Harta</a>
+                    	<a href="detail/get_id/<?=$cid?>" rel="#overlay" title="Toate informatiile despre aceasta cazare"> Detalii </a>  <a href="" title="localizeaza"> </a>
                     </div> <!-- b -->
                 </div>   
              </div>
@@ -74,14 +70,3 @@
           <? } ?>
        </div> <!-- instances end -->
     </div>   <!-- vertical end -->
-    
- 
-
-<!-- overlayed element -->
-<div class="apple_overlay" id="overlay">
-
-	<!-- the external content is loaded inside this tag -->
-	<div class="contentWrap"></div>
-
-</div>
-

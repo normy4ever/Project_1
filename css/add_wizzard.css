@@ -271,7 +271,15 @@ form p{
 	width:100%;
 }
 
+#upload_form{
+	float:left;	
+}
+
+#upload_form p{
+	margin-left:80px;
+}
+
 #thinking{
 	display:none;
-	padding-left:225px;
+	padding-left:25px;
 }

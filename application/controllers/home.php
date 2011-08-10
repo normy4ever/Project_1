@@ -129,19 +129,19 @@ class Home extends CI_Controller {
 
 		$this->table->set_template($tmpl); 
 		
-		$this->table->add_row(anchor('', 'Cauta', 'title="Cauta"'));
+		$this->table->add_row(anchor('/listall', 'Caută', 'title="Caută"'));
 		$this->table->add_row(img('img/valaszto.png'));
 		if($this->session->userdata('user'))
 		{
-			$this->table->add_row(anchor('/add','Adauga cazare'));
+			$this->table->add_row(anchor('/add','Adaugă cazare'));
 		}
 		else
 		{
-			$this->table->add_row(anchor('home/login','Adauga cazare',array('class'=>'modalInput','rel'=>'#login_window')));
+			$this->table->add_row(anchor('home/login','Adaugă cazare',array('class'=>'modalInput','rel'=>'#login_window')));
 		}
 		$this->table->add_row('&nbsp');
 		$cell = array('id' => 'smallmenu');
-		$this->table->add_row(anchor('/listall','Listeeaza toate ofertele', $cell));
+		$this->table->add_row(anchor('/listall','Listează toate ofertele', $cell));
 		$this->table->add_row('&nbsp');
 		//$this->table->add_row('<li href="" id="despre_b" class = "smallmenu"> ASD </li>'); 
 		$this->table->add_row(anchor('home/despre','Despre Carei', $cell));
@@ -163,19 +163,19 @@ class Home extends CI_Controller {
 
 		$this->table->set_template($tmpl); 
 		
-		$this->table->add_row(anchor('', 'Cauta', 'title="Cauta"'));
+		$this->table->add_row(anchor('/listall', 'Caută', 'title="Caută"'));
 		$this->table->add_row(img('img/valaszto.png'));
 		if($this->session->userdata('user'))
 		{
-			$this->table->add_row(anchor('/add','Adauga cazare'));
+			$this->table->add_row(anchor('/add','Adaugă cazare'));
 		}
 		else
 		{
-			$this->table->add_row(anchor('home/login','Adauga cazare',array('class'=>'modalInput','rel'=>'#login_window')));
+			$this->table->add_row(anchor('home/login','Adaugă cazare',array('class'=>'modalInput','rel'=>'#login_window')));
 		}
 		$this->table->add_row('&nbsp');
 		$cell = array('id' => 'smallmenu');
-		$this->table->add_row(anchor('/listall','Listeeaza toate ofertele', $cell));
+		$this->table->add_row(anchor('/listall','Listeează toate ofertele', $cell));
 		$this->table->add_row('&nbsp');
 		//$this->table->add_row('<li href="" id="despre_b" class = "smallmenu"> ASD </li>'); 
 		$this->table->add_row(anchor('home/despre','Despre Carei', $cell));

@@ -206,7 +206,10 @@
 				  'value'       => '',
 				  'maxlength'   => '30',
 				  'type'		=> 'number',
-				  'style'   	=> 'width:100px;',
+				  'size'		=> '4',
+				  'min'			=> '5',
+				  'max'			=> '50',
+				  'style'   	=> 'width:100px;'
             	);
 				echo form_input($data);
 				echo '</p><p>Email: ';

@@ -1,5 +1,6 @@
 <div id="file_upload">
     <div> 
+    <div id="upload_form">
      <p class="steptitle">PASUL 4 - Incarca pozele</p>
         <?php
 		$atr = array('id' => 'up_it');
@@ -14,7 +15,12 @@
             echo form_close();
         }
         ?>		
-        <div id="thinking"><? echo img('img/thinking.gif'); ?></div>
+        <p>Incarca maxim 6 poze!</p>
+  		
+            <div id="thinking">
+                <? echo img('img/thinking.gif');  ?><p  style="float:left;">Incarcarea are loc! </p>
+            </div>
+        </div>
       </div>  
       <div id="temp_gallery">
        <?php

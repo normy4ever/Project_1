@@ -1,4 +1,3 @@
-
 <link href="<?= base_url();?>css/details.css"  rel="stylesheet" type="text/css" />
 
 <link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
@@ -33,9 +32,16 @@
           <!-- 1-5 -->
           <div>
           <?
-          		foreach($dir as $elem)
+		  		if($dir)
 				{
-					echo img('pictures/'.$cid.'/thumbs/'.$elem['name']);
+					foreach($dir as $elem)
+					{
+						echo img('pictures/'.$cid.'/thumbs/'.$elem['name']);
+					}
+				}
+				else
+				{
+					echo '<p>Fara imagini atasate.</p>';	
 				}
 		  ?>
 
@@ -54,7 +60,7 @@
     
     	<!-- Initially the image is a simple 1x1 pixel transparent GIF -->
     	<img src="http://static.flowplayer.org/tools/img/blank.gif" width="500" height="375" />
-    
+    	
     </div>
     
     <div id="detail_text">

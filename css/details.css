@@ -195,16 +195,19 @@ a.disabled {
 }
 
 .image-title {
-    width: 200px;
+    width: 90%;
 	margin:0 auto;
 	left:auto;
 	right:auto;
+	text-align:center;
     margin-top: 10px;
 	font-family:'Kreon', arial, serif;
 	font-size:24px;
 	text-decoration:underline;
 	color:#dcb88d;
 	text-shadow: 0 0 0.2em #000000, 0 0 0.2em #000000, 0 0 0.2em #000000;
+	filter: glow(color=#0000ff,strength=3);
+
 }
 
 #contact{

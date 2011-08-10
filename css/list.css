@@ -62,7 +62,7 @@
 }
 
 /* elements inside single item */
-.instance img {
+#listed_img{
 	float:left;
 	margin-left:20px;
 	margin-right:25px;
@@ -72,6 +72,16 @@
 	-moz-box-shadow: 3px 5px 5px #666;
 	-webkit-box-shadow: 3px 5px 5px #666;
 	box-shadow: 3px 5px 5px #666;
+}
+
+#listed_img img {
+	display:block;
+	margin:0 auto;
+    left: auto;
+    right: auto;
+	vertical-align:middle;
+	max-height:165px;
+	max-width:220px;
 }
 
 .instance h3 {
@@ -181,13 +191,12 @@
 .b{
 	width:100%;
 	height:14%;
-	font-family:'Neuton', arial, serif;
-	font-size:14px;
 }
 
 .b a{
-	margin-left:25px;
+	font-family:'Neuton', arial, serif;
 	font-size:16px;
+	margin-left:25px;
 	color:#456;
 	font-weight:normal;
 	text-decoration:none;

@@ -11,7 +11,7 @@ body {
 	background-color:#edf6fd;
 	background-image:url(../img/background.jpg);
 	background-position:top;
-	background-repeat:repeat;	
+	background-repeat:repeat;
 }
 
 a {
@@ -64,16 +64,17 @@ h4{
 	overflow:auto;
 }
 
-#footer #opto_panel{
-	background-image:url(../img/copyright.png);
+#opto_panel{
+	background-image:url(../img/copyright3.png);
     background-repeat:no-repeat;
     background-position:center;
-	width:960px;
-	height:22px;
-	padding-top:10px;
-	margin:0 auto;
-	left:0;
-	right:0;
+	width:27px;
+	height:294px;
+	display:block;
+	position:absolute;
+    bottom:0;
+    right:0;
+	overflow:auto;
 }
 
 
@@ -121,8 +122,8 @@ h4{
 #user_panel p{
 	width:auto;
 	display: block;
-	font-family:'Neuton', arial, serif;
-	font-size:13px;
+	font-family:'Kreon', arial, serif;
+	font-size:14px;
 	text-decoration:none;
 	color:#8b1213;
 	text-align:left;
@@ -189,6 +190,7 @@ h4{
 	height:100%;
 	min-height:100%;
 	position:absolute;
+	display:block;
 	margin:0 auto;
 	right:0;
 	left:0;
@@ -531,8 +533,9 @@ h4{
 }
 
 #contact_p{
-	width:70%;
+	width:100%;
 	margin:0 auto;
+	text-align:center;
 	left:auto;
 	right:auto;	
 	overflow:auto;
