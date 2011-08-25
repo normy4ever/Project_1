@@ -309,7 +309,7 @@
 				mask: {
 					color: '#334455',
 					loadSpeed: 200,
-					opacity: 0.5
+					opacity: 0.6
 				},
 			
 				closeOnClick: true

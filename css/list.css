@@ -4,7 +4,6 @@
 	/* required settings */
 	position:relative;
 	overflow:hidden;	
-
 	/* vertical scrollers have typically larger height than width */	
 	height: 680px;	 
 	width: 800px;

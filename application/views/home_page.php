@@ -70,7 +70,7 @@
                             <br /><br /><br /><br /><br />
                             <p class="highlight">Preț: 50 RON/cameră </p>
                             <br />
-                            <a rel="#overlay" href="http://localhost/cazarecarei/index.php/detail/get_id/75" style="color:#BBBBBB;margin-left:48px;"> Detalii </a>
+                            <div class="b"><a rel="#overlay" href="<?= base_url();?>index.php/detail/get_id/75" style="color:#BBBBBB;margin-left:48px;"> Detalii </a></div>
                          </div>
                       </div> 
                       

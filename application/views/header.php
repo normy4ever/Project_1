@@ -31,11 +31,7 @@ echo meta($meta); */
 <link href="<?= base_url();?>css/add_wizzard.css"  rel="stylesheet" type="text/css" />
 <link href="<?= base_url();?>css/error.css"  rel="stylesheet" type="text/css" />
 
-<link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Kreon' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Neuton' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-
+<link href='http://fonts.googleapis.com/css?family=Alice|Kreon|Neuton' rel='stylesheet' type='text/css'>
 
 <script type="text/javascript" src="http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js"></script>
 <script type="text/javascript" src="<?= base_url();?>js/jquery.opacityrollover.js"></script>
@@ -52,6 +48,13 @@ echo meta($meta); */
         	<? echo anchor("",img(array('src'=>'img/logo.png','border'=>'0','alt'=>'CazareCarei.ro'))); ?>
         </div>  
        
+     <? if(isset($link))
+	 	{
+       		echo '<div>';
+       		echo anchor("home",img(array('src'=>'img/home.png','border'=>'0','alt'=>'Home')),array('id'=>'link_home'));        
+       		echo '</div>';
+		}
+     ?>
         <div id="login_panel">
 			<? if($this->session->userdata('logged_in'))
 				{
@@ -68,7 +71,7 @@ echo meta($meta); */
         <? if($this->session->userdata('user'))
 				{
 				 echo '<div id="user_panel">';
-				 	echo '<p>' .$this->session->userdata('user'). '</p>';
+				 	echo anchor("edit", $this->session->userdata('user'));
 				 echo '</div>';
 				}
 		?>           
@@ -120,7 +123,7 @@ echo meta($meta); */
             <?php echo form_close();?>
             
             <!-------------------------------------   Add user   -------------------------------------->
-            <p id="click_inreg"> Creare cont</p>
+            <!--<p id="click_inreg"> Creare cont</p>-->
             <?php 
 				 	$atr=array('id' => 'create_form');
             		echo form_open('home/create_account', $atr);

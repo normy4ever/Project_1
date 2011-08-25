@@ -46,6 +46,18 @@ class Login_model extends CI_Model
 			
 		}
 		
+		function get_uid($usern)
+        {  
+			$this->db->select('user_id');
+			$this->db->where('user_email', $usern); 
+			$query= $this->db->get('ccusers');
+				if($query->num_rows() > 0)
+				{
+				  return $query->row();  
+				}
+			
+		}
+		
 		
     }
 ?>

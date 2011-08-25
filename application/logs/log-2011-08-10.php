@@ -1733,3 +1733,285 @@ DEBUG - 2011-08-10 20:02:50 --> Model Class Initialized
 DEBUG - 2011-08-10 20:02:50 --> File loaded: application/views/detail_page.php
 DEBUG - 2011-08-10 20:02:50 --> Final output sent to browser
 DEBUG - 2011-08-10 20:02:50 --> Total execution time: 1.1357
+DEBUG - 2011-08-10 21:31:29 --> Config Class Initialized
+DEBUG - 2011-08-10 21:31:29 --> Hooks Class Initialized
+DEBUG - 2011-08-10 21:31:29 --> Utf8 Class Initialized
+DEBUG - 2011-08-10 21:31:29 --> UTF-8 Support Enabled
+DEBUG - 2011-08-10 21:31:29 --> URI Class Initialized
+DEBUG - 2011-08-10 21:31:29 --> Router Class Initialized
+DEBUG - 2011-08-10 21:31:29 --> Output Class Initialized
+DEBUG - 2011-08-10 21:31:29 --> Security Class Initialized
+DEBUG - 2011-08-10 21:31:29 --> Input Class Initialized
+DEBUG - 2011-08-10 21:31:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-08-10 21:31:29 --> Language Class Initialized
+DEBUG - 2011-08-10 21:31:29 --> Loader Class Initialized
+DEBUG - 2011-08-10 21:31:29 --> Helper loaded: url_helper
+DEBUG - 2011-08-10 21:31:29 --> Helper loaded: html_helper
+DEBUG - 2011-08-10 21:31:29 --> Helper loaded: form_helper
+DEBUG - 2011-08-10 21:31:29 --> Database Driver Class Initialized
+DEBUG - 2011-08-10 21:31:29 --> Session Class Initialized
+DEBUG - 2011-08-10 21:31:29 --> Helper loaded: string_helper
+DEBUG - 2011-08-10 21:31:29 --> Session routines successfully run
+DEBUG - 2011-08-10 21:31:29 --> Controller Class Initialized
+DEBUG - 2011-08-10 21:31:29 --> Table Class Initialized
+DEBUG - 2011-08-10 21:31:29 --> Helper loaded: file_helper
+DEBUG - 2011-08-10 21:31:30 --> Helper loaded: text_helper
+DEBUG - 2011-08-10 21:31:30 --> Model Class Initialized
+DEBUG - 2011-08-10 21:31:30 --> Model Class Initialized
+DEBUG - 2011-08-10 21:31:30 --> File loaded: application/views/header.php
+ERROR - 2011-08-10 21:31:30 --> Severity: Warning  --> opendir(pictures/76,pictures/76) [<a href='function.opendir'>function.opendir</a>]: The system cannot find the file specified. (code: 2) C:\wamp\www\cazarecarei\system\helpers\file_helper.php 180
+ERROR - 2011-08-10 21:31:30 --> Severity: Warning  --> opendir(pictures/76) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No error C:\wamp\www\cazarecarei\system\helpers\file_helper.php 180
+ERROR - 2011-08-10 21:31:30 --> Severity: Warning  --> opendir(pictures/80,pictures/80) [<a href='function.opendir'>function.opendir</a>]: The system cannot find the file specified. (code: 2) C:\wamp\www\cazarecarei\system\helpers\file_helper.php 180
+ERROR - 2011-08-10 21:31:30 --> Severity: Warning  --> opendir(pictures/80) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No error C:\wamp\www\cazarecarei\system\helpers\file_helper.php 180
+ERROR - 2011-08-10 21:31:30 --> Severity: Warning  --> opendir(pictures/82,pictures/82) [<a href='function.opendir'>function.opendir</a>]: The system cannot find the file specified. (code: 2) C:\wamp\www\cazarecarei\system\helpers\file_helper.php 180
+ERROR - 2011-08-10 21:31:30 --> Severity: Warning  --> opendir(pictures/82) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No error C:\wamp\www\cazarecarei\system\helpers\file_helper.php 180
+ERROR - 2011-08-10 21:31:30 --> Severity: Warning  --> opendir(pictures/84,pictures/84) [<a href='function.opendir'>function.opendir</a>]: The system cannot find the file specified. (code: 2) C:\wamp\www\cazarecarei\system\helpers\file_helper.php 180
+ERROR - 2011-08-10 21:31:30 --> Severity: Warning  --> opendir(pictures/84) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No error C:\wamp\www\cazarecarei\system\helpers\file_helper.php 180
+ERROR - 2011-08-10 21:31:30 --> Severity: Warning  --> opendir(pictures/86,pictures/86) [<a href='function.opendir'>function.opendir</a>]: The system cannot find the file specified. (code: 2) C:\wamp\www\cazarecarei\system\helpers\file_helper.php 180
+ERROR - 2011-08-10 21:31:30 --> Severity: Warning  --> opendir(pictures/86) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No error C:\wamp\www\cazarecarei\system\helpers\file_helper.php 180
+ERROR - 2011-08-10 21:31:30 --> Severity: Warning  --> opendir(pictures/88,pictures/88) [<a href='function.opendir'>function.opendir</a>]: The system cannot find the file specified. (code: 2) C:\wamp\www\cazarecarei\system\helpers\file_helper.php 180
+ERROR - 2011-08-10 21:31:30 --> Severity: Warning  --> opendir(pictures/88) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No error C:\wamp\www\cazarecarei\system\helpers\file_helper.php 180
+ERROR - 2011-08-10 21:31:30 --> Severity: Warning  --> opendir(pictures/90,pictures/90) [<a href='function.opendir'>function.opendir</a>]: The system cannot find the file specified. (code: 2) C:\wamp\www\cazarecarei\system\helpers\file_helper.php 180
+ERROR - 2011-08-10 21:31:30 --> Severity: Warning  --> opendir(pictures/90) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: No error C:\wamp\www\cazarecarei\system\helpers\file_helper.php 180
+DEBUG - 2011-08-10 21:31:30 --> File loaded: application/views/list_page.php
+DEBUG - 2011-08-10 21:31:30 --> File loaded: application/views/footer.php
+DEBUG - 2011-08-10 21:31:30 --> Final output sent to browser
+DEBUG - 2011-08-10 21:31:30 --> Total execution time: 1.4473
+DEBUG - 2011-08-10 21:31:34 --> Config Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> Hooks Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> Config Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> Utf8 Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> Hooks Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> UTF-8 Support Enabled
+DEBUG - 2011-08-10 21:31:34 --> Utf8 Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> URI Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> UTF-8 Support Enabled
+DEBUG - 2011-08-10 21:31:34 --> Router Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> URI Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> Output Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> Router Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> Security Class Initialized
+ERROR - 2011-08-10 21:31:34 --> 404 Page Not Found --> non
+DEBUG - 2011-08-10 21:31:34 --> Input Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-08-10 21:31:34 --> Language Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> Loader Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> Helper loaded: url_helper
+DEBUG - 2011-08-10 21:31:34 --> Helper loaded: html_helper
+DEBUG - 2011-08-10 21:31:34 --> Helper loaded: form_helper
+DEBUG - 2011-08-10 21:31:34 --> Database Driver Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> Session Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> Helper loaded: string_helper
+DEBUG - 2011-08-10 21:31:34 --> Session routines successfully run
+DEBUG - 2011-08-10 21:31:34 --> Controller Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> Table Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> Helper loaded: file_helper
+DEBUG - 2011-08-10 21:31:34 --> Helper loaded: text_helper
+DEBUG - 2011-08-10 21:31:34 --> Model Class Initialized
+DEBUG - 2011-08-10 21:31:34 --> Model Class Initialized
+DEBUG - 2011-08-10 21:31:35 --> File loaded: application/views/detail_page.php
+DEBUG - 2011-08-10 21:31:35 --> Final output sent to browser
+DEBUG - 2011-08-10 21:31:35 --> Total execution time: 1.0187
+DEBUG - 2011-08-10 21:32:39 --> Config Class Initialized
+DEBUG - 2011-08-10 21:32:39 --> Hooks Class Initialized
+DEBUG - 2011-08-10 21:32:39 --> Utf8 Class Initialized
+DEBUG - 2011-08-10 21:32:39 --> UTF-8 Support Enabled
+DEBUG - 2011-08-10 21:32:39 --> URI Class Initialized
+DEBUG - 2011-08-10 21:32:39 --> Router Class Initialized
+DEBUG - 2011-08-10 21:32:39 --> Output Class Initialized
+DEBUG - 2011-08-10 21:32:39 --> Security Class Initialized
+DEBUG - 2011-08-10 21:32:39 --> Input Class Initialized
+DEBUG - 2011-08-10 21:32:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-08-10 21:32:40 --> Language Class Initialized
+DEBUG - 2011-08-10 21:32:40 --> Loader Class Initialized
+DEBUG - 2011-08-10 21:32:40 --> Helper loaded: url_helper
+DEBUG - 2011-08-10 21:32:40 --> Helper loaded: html_helper
+DEBUG - 2011-08-10 21:32:40 --> Helper loaded: form_helper
+DEBUG - 2011-08-10 21:32:40 --> Database Driver Class Initialized
+DEBUG - 2011-08-10 21:32:40 --> Session Class Initialized
+DEBUG - 2011-08-10 21:32:40 --> Helper loaded: string_helper
+DEBUG - 2011-08-10 21:32:40 --> A session cookie was not found.
+DEBUG - 2011-08-10 21:32:40 --> Session routines successfully run
+DEBUG - 2011-08-10 21:32:40 --> Controller Class Initialized
+DEBUG - 2011-08-10 21:32:40 --> Helper loaded: file_helper
+DEBUG - 2011-08-10 21:32:40 --> Table Class Initialized
+DEBUG - 2011-08-10 21:32:40 --> Model Class Initialized
+DEBUG - 2011-08-10 21:32:40 --> Model Class Initialized
+DEBUG - 2011-08-10 21:32:40 --> Helper loaded: directory_helper
+DEBUG - 2011-08-10 21:32:40 --> Model Class Initialized
+DEBUG - 2011-08-10 21:32:40 --> Final output sent to browser
+DEBUG - 2011-08-10 21:32:40 --> Total execution time: 0.8430
+DEBUG - 2011-08-10 21:32:53 --> Config Class Initialized
+DEBUG - 2011-08-10 21:32:53 --> Hooks Class Initialized
+DEBUG - 2011-08-10 21:32:53 --> Utf8 Class Initialized
+DEBUG - 2011-08-10 21:32:53 --> UTF-8 Support Enabled
+DEBUG - 2011-08-10 21:32:53 --> URI Class Initialized
+DEBUG - 2011-08-10 21:32:53 --> Router Class Initialized
+DEBUG - 2011-08-10 21:32:53 --> Output Class Initialized
+DEBUG - 2011-08-10 21:32:53 --> Security Class Initialized
+DEBUG - 2011-08-10 21:32:53 --> Input Class Initialized
+DEBUG - 2011-08-10 21:32:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-08-10 21:32:53 --> Language Class Initialized
+DEBUG - 2011-08-10 21:32:53 --> Loader Class Initialized
+DEBUG - 2011-08-10 21:32:53 --> Helper loaded: url_helper
+DEBUG - 2011-08-10 21:32:53 --> Helper loaded: html_helper
+DEBUG - 2011-08-10 21:32:53 --> Helper loaded: form_helper
+DEBUG - 2011-08-10 21:32:53 --> Database Driver Class Initialized
+DEBUG - 2011-08-10 21:32:53 --> Session Class Initialized
+DEBUG - 2011-08-10 21:32:53 --> Helper loaded: string_helper
+DEBUG - 2011-08-10 21:32:53 --> A session cookie was not found.
+DEBUG - 2011-08-10 21:32:53 --> Session routines successfully run
+DEBUG - 2011-08-10 21:32:53 --> Controller Class Initialized
+DEBUG - 2011-08-10 21:32:53 --> Helper loaded: file_helper
+DEBUG - 2011-08-10 21:32:53 --> Table Class Initialized
+DEBUG - 2011-08-10 21:32:54 --> Model Class Initialized
+DEBUG - 2011-08-10 21:32:54 --> Model Class Initialized
+DEBUG - 2011-08-10 21:32:54 --> Helper loaded: directory_helper
+DEBUG - 2011-08-10 21:32:54 --> Model Class Initialized
+DEBUG - 2011-08-10 21:32:54 --> Final output sent to browser
+DEBUG - 2011-08-10 21:32:54 --> Total execution time: 0.8661
+DEBUG - 2011-08-10 21:32:54 --> Config Class Initialized
+DEBUG - 2011-08-10 21:32:54 --> Hooks Class Initialized
+DEBUG - 2011-08-10 21:32:54 --> Utf8 Class Initialized
+DEBUG - 2011-08-10 21:32:54 --> UTF-8 Support Enabled
+DEBUG - 2011-08-10 21:32:54 --> URI Class Initialized
+DEBUG - 2011-08-10 21:32:54 --> Router Class Initialized
+DEBUG - 2011-08-10 21:32:54 --> Output Class Initialized
+DEBUG - 2011-08-10 21:32:54 --> Security Class Initialized
+DEBUG - 2011-08-10 21:32:54 --> Input Class Initialized
+DEBUG - 2011-08-10 21:32:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-08-10 21:32:54 --> Language Class Initialized
+DEBUG - 2011-08-10 21:32:54 --> Loader Class Initialized
+DEBUG - 2011-08-10 21:32:54 --> Helper loaded: url_helper
+DEBUG - 2011-08-10 21:32:54 --> Helper loaded: html_helper
+DEBUG - 2011-08-10 21:32:54 --> Helper loaded: form_helper
+DEBUG - 2011-08-10 21:32:54 --> Database Driver Class Initialized
+DEBUG - 2011-08-10 21:32:54 --> Session Class Initialized
+DEBUG - 2011-08-10 21:32:54 --> Helper loaded: string_helper
+DEBUG - 2011-08-10 21:32:54 --> A session cookie was not found.
+DEBUG - 2011-08-10 21:32:54 --> Session routines successfully run
+DEBUG - 2011-08-10 21:32:54 --> Controller Class Initialized
+DEBUG - 2011-08-10 21:32:54 --> Helper loaded: file_helper
+DEBUG - 2011-08-10 21:32:54 --> Table Class Initialized
+DEBUG - 2011-08-10 21:32:54 --> Model Class Initialized
+DEBUG - 2011-08-10 21:32:55 --> Model Class Initialized
+DEBUG - 2011-08-10 21:32:55 --> Helper loaded: directory_helper
+DEBUG - 2011-08-10 21:32:55 --> Model Class Initialized
+DEBUG - 2011-08-10 21:32:55 --> Final output sent to browser
+DEBUG - 2011-08-10 21:32:55 --> Total execution time: 0.8778
+DEBUG - 2011-08-10 21:33:01 --> Config Class Initialized
+DEBUG - 2011-08-10 21:33:01 --> Hooks Class Initialized
+DEBUG - 2011-08-10 21:33:01 --> Utf8 Class Initialized
+DEBUG - 2011-08-10 21:33:01 --> UTF-8 Support Enabled
+DEBUG - 2011-08-10 21:33:01 --> URI Class Initialized
+DEBUG - 2011-08-10 21:33:01 --> Router Class Initialized
+DEBUG - 2011-08-10 21:33:01 --> Output Class Initialized
+DEBUG - 2011-08-10 21:33:01 --> Security Class Initialized
+DEBUG - 2011-08-10 21:33:01 --> Input Class Initialized
+DEBUG - 2011-08-10 21:33:01 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-08-10 21:33:01 --> Language Class Initialized
+DEBUG - 2011-08-10 21:33:01 --> Loader Class Initialized
+DEBUG - 2011-08-10 21:33:01 --> Helper loaded: url_helper
+DEBUG - 2011-08-10 21:33:01 --> Helper loaded: html_helper
+DEBUG - 2011-08-10 21:33:02 --> Helper loaded: form_helper
+DEBUG - 2011-08-10 21:33:02 --> Database Driver Class Initialized
+DEBUG - 2011-08-10 21:33:02 --> Session Class Initialized
+DEBUG - 2011-08-10 21:33:02 --> Helper loaded: string_helper
+DEBUG - 2011-08-10 21:33:02 --> A session cookie was not found.
+DEBUG - 2011-08-10 21:33:02 --> Session routines successfully run
+DEBUG - 2011-08-10 21:33:02 --> Controller Class Initialized
+DEBUG - 2011-08-10 21:33:02 --> Helper loaded: file_helper
+DEBUG - 2011-08-10 21:33:02 --> Table Class Initialized
+DEBUG - 2011-08-10 21:33:02 --> Model Class Initialized
+DEBUG - 2011-08-10 21:33:02 --> Model Class Initialized
+DEBUG - 2011-08-10 21:33:02 --> Helper loaded: directory_helper
+DEBUG - 2011-08-10 21:33:02 --> Model Class Initialized
+DEBUG - 2011-08-10 21:33:02 --> Final output sent to browser
+DEBUG - 2011-08-10 21:33:02 --> Total execution time: 0.9065
+DEBUG - 2011-08-10 21:33:02 --> Config Class Initialized
+DEBUG - 2011-08-10 21:33:02 --> Hooks Class Initialized
+DEBUG - 2011-08-10 21:33:02 --> Utf8 Class Initialized
+DEBUG - 2011-08-10 21:33:02 --> UTF-8 Support Enabled
+DEBUG - 2011-08-10 21:33:02 --> URI Class Initialized
+DEBUG - 2011-08-10 21:33:02 --> Router Class Initialized
+DEBUG - 2011-08-10 21:33:02 --> Output Class Initialized
+DEBUG - 2011-08-10 21:33:02 --> Security Class Initialized
+DEBUG - 2011-08-10 21:33:02 --> Input Class Initialized
+DEBUG - 2011-08-10 21:33:02 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-08-10 21:33:02 --> Language Class Initialized
+DEBUG - 2011-08-10 21:33:02 --> Loader Class Initialized
+DEBUG - 2011-08-10 21:33:02 --> Helper loaded: url_helper
+DEBUG - 2011-08-10 21:33:02 --> Helper loaded: html_helper
+DEBUG - 2011-08-10 21:33:03 --> Helper loaded: form_helper
+DEBUG - 2011-08-10 21:33:03 --> Database Driver Class Initialized
+DEBUG - 2011-08-10 21:33:03 --> Session Class Initialized
+DEBUG - 2011-08-10 21:33:03 --> Helper loaded: string_helper
+DEBUG - 2011-08-10 21:33:03 --> A session cookie was not found.
+DEBUG - 2011-08-10 21:33:03 --> Session routines successfully run
+DEBUG - 2011-08-10 21:33:03 --> Controller Class Initialized
+DEBUG - 2011-08-10 21:33:03 --> Helper loaded: file_helper
+DEBUG - 2011-08-10 21:33:03 --> Table Class Initialized
+DEBUG - 2011-08-10 21:33:03 --> Model Class Initialized
+DEBUG - 2011-08-10 21:33:03 --> Model Class Initialized
+DEBUG - 2011-08-10 21:33:03 --> Helper loaded: directory_helper
+DEBUG - 2011-08-10 21:33:03 --> Model Class Initialized
+DEBUG - 2011-08-10 21:33:03 --> Final output sent to browser
+DEBUG - 2011-08-10 21:33:03 --> Total execution time: 0.9106
+DEBUG - 2011-08-10 21:33:15 --> Config Class Initialized
+DEBUG - 2011-08-10 21:33:15 --> Hooks Class Initialized
+DEBUG - 2011-08-10 21:33:15 --> Utf8 Class Initialized
+DEBUG - 2011-08-10 21:33:15 --> UTF-8 Support Enabled
+DEBUG - 2011-08-10 21:33:15 --> URI Class Initialized
+DEBUG - 2011-08-10 21:33:15 --> Router Class Initialized
+DEBUG - 2011-08-10 21:33:15 --> Output Class Initialized
+DEBUG - 2011-08-10 21:33:15 --> Security Class Initialized
+DEBUG - 2011-08-10 21:33:15 --> Input Class Initialized
+DEBUG - 2011-08-10 21:33:15 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-08-10 21:33:15 --> Language Class Initialized
+DEBUG - 2011-08-10 21:33:15 --> Loader Class Initialized
+DEBUG - 2011-08-10 21:33:15 --> Helper loaded: url_helper
+DEBUG - 2011-08-10 21:33:15 --> Helper loaded: html_helper
+DEBUG - 2011-08-10 21:33:15 --> Helper loaded: form_helper
+DEBUG - 2011-08-10 21:33:16 --> Database Driver Class Initialized
+DEBUG - 2011-08-10 21:33:16 --> Session Class Initialized
+DEBUG - 2011-08-10 21:33:16 --> Helper loaded: string_helper
+DEBUG - 2011-08-10 21:33:16 --> A session cookie was not found.
+DEBUG - 2011-08-10 21:33:16 --> Session routines successfully run
+DEBUG - 2011-08-10 21:33:16 --> Controller Class Initialized
+DEBUG - 2011-08-10 21:33:16 --> Helper loaded: file_helper
+DEBUG - 2011-08-10 21:33:16 --> Table Class Initialized
+DEBUG - 2011-08-10 21:33:16 --> Model Class Initialized
+DEBUG - 2011-08-10 21:33:16 --> Model Class Initialized
+DEBUG - 2011-08-10 21:33:16 --> Helper loaded: directory_helper
+DEBUG - 2011-08-10 21:33:16 --> Model Class Initialized
+DEBUG - 2011-08-10 21:33:16 --> Final output sent to browser
+DEBUG - 2011-08-10 21:33:16 --> Total execution time: 0.9690
+DEBUG - 2011-08-10 21:33:21 --> Config Class Initialized
+DEBUG - 2011-08-10 21:33:21 --> Hooks Class Initialized
+DEBUG - 2011-08-10 21:33:21 --> Utf8 Class Initialized
+DEBUG - 2011-08-10 21:33:21 --> UTF-8 Support Enabled
+DEBUG - 2011-08-10 21:33:21 --> URI Class Initialized
+DEBUG - 2011-08-10 21:33:21 --> Router Class Initialized
+DEBUG - 2011-08-10 21:33:21 --> Output Class Initialized
+DEBUG - 2011-08-10 21:33:21 --> Security Class Initialized
+DEBUG - 2011-08-10 21:33:21 --> Input Class Initialized
+DEBUG - 2011-08-10 21:33:21 --> Global POST and COOKIE data sanitized
+DEBUG - 2011-08-10 21:33:21 --> Language Class Initialized
+DEBUG - 2011-08-10 21:33:22 --> Loader Class Initialized
+DEBUG - 2011-08-10 21:33:22 --> Helper loaded: url_helper
+DEBUG - 2011-08-10 21:33:22 --> Helper loaded: html_helper
+DEBUG - 2011-08-10 21:33:22 --> Helper loaded: form_helper
+DEBUG - 2011-08-10 21:33:22 --> Database Driver Class Initialized
+DEBUG - 2011-08-10 21:33:22 --> Session Class Initialized
+DEBUG - 2011-08-10 21:33:22 --> Helper loaded: string_helper
+DEBUG - 2011-08-10 21:33:22 --> A session cookie was not found.
+DEBUG - 2011-08-10 21:33:22 --> Session routines successfully run
+DEBUG - 2011-08-10 21:33:22 --> Controller Class Initialized
+DEBUG - 2011-08-10 21:33:22 --> Helper loaded: file_helper
+DEBUG - 2011-08-10 21:33:22 --> Table Class Initialized
+DEBUG - 2011-08-10 21:33:22 --> Model Class Initialized
+DEBUG - 2011-08-10 21:33:22 --> Model Class Initialized
+DEBUG - 2011-08-10 21:33:22 --> Helper loaded: directory_helper
+DEBUG - 2011-08-10 21:33:22 --> Model Class Initialized
+DEBUG - 2011-08-10 21:33:22 --> Final output sent to browser
+DEBUG - 2011-08-10 21:33:22 --> Total execution time: 0.9430

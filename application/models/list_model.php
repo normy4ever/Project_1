@@ -81,6 +81,22 @@ class List_model extends CI_Model {
 		return $data;
 	}
 	
+	function return_user_owned($uid)
+	{
+		//var_dump($uid);
+		$this->db->select('*');
+		$this->db->where('owner_id', $uid); 
+		$query= $this->db->get('cazarea');
+		//var_dump($query);
+			foreach ($query->result() as $value)
+			{
+				//var_dump($value);
+				$data[$value->cazare_id]=$value;
+			}
+			
+		return $data;
+	}
+	
 	
 }
 

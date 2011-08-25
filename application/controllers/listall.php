@@ -14,6 +14,7 @@ class Listall extends CI_Controller {
 	function index()
 	{
 		$data1['title'] = 'CazareCarei.ro';
+		$data1['link'] = 'yes';
 		$data2=array();
 		
 		$cazari = $this->list_model->return_cazare_table();
