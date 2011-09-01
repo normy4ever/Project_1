@@ -364,6 +364,36 @@
 			
 		},
 		
+		Del_question: function() {
+			var triggers = $(".modalInput").overlay({
+	
+				// some mask tweaks suitable for modal dialogs
+				/*mask: {
+					//color: '#ebecff',
+					loadSpeed: 200,
+					//opacity: 0.9
+				},*/
+			
+				closeOnClick: false
+				
+			});	
+		},
+		
+		Del_answer: function(atr) {
+			
+				var buttons = $(".question_b").click(function(e) {
+				//event.stopPropagation();
+				//alert(atr);
+				//$(".question_b").onclick('http://localhost/index.php/edit/deleteall/'+atr);
+				//$(".question_b").attr("onclick","http://localhost/index.php/edit/deleteall/"+atr);
+				$('#result').load("http://localhost/index.php/edit/deleteall/"+atr);
+				
+				 $(".question_b").unbind('click');
+
+			});		
+		},
+		
+		
 		Account_validate: function() {
 							
 			// initialize validator and add a custom form submission logic
@@ -410,7 +440,7 @@ $(document).ready(function(){
 	Application.Add_wizzard();
     Application.Thinking();
 	Application.Validate_forms();
-	//Application.Change_menu();
+	//Application.Del_question();
 });
 
 

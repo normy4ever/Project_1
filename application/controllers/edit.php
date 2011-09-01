@@ -11,13 +11,13 @@ class Edit extends CI_Controller {
 	}
 	
 	
-	function update()
+	function update($cid)
 	{
 		if ($this->session->userdata('user'))
 		{
 			if ($this->input->post('update'))
 			{	
-				$cid = $this->input->post('cazare_id');
+				//$cid = $this->input->post('cazare_id');
 			
 				$data1 = array(
 					   'name' => $this->input->post('name'),
@@ -33,36 +33,101 @@ class Edit extends CI_Controller {
 					   'contact_email' => $this->input->post('contact_email')
 					);
 					
-				$data2 = array(
-					   'tv' => $this->input->post('tv'),
-					   'frigider' => $this->input->post('frigider'),
-					   'internet' => $this->input->post('internet'),
-					   'grill' => $this->input->post('grill'),
-					   'parcare_in' => $this->input->post('parcare_in'),
-					   'apacalda' => $this->input->post('apacalda')
-					);
+				
+					$tv=0;
+					$frigider=0;
+					$internet=0;
+					$grill=0;
+					$apacalda=0;
+					$parcare_in=0;
+				
+					if($this->input->post('tv')=='accept')
+					{
+					   $tv = '1';
+					}
+					if($this->input->post('frigider')=='accept')
+					{
+					   $frigider = 1;
+					}
+					if($this->input->post('internet')=='accept')
+					{
+					   $internet = 1;
+					}
+					if($this->input->post('grill')=='accept')
+					{
+					   $grill = 1;
+					}
+					if($this->input->post('parcare_in')=='accept')
+					{
+					   $parcare_in = 1;
+					}
+					if($this->input->post('apacalda')=='accept')
+					{
+					   $apacalda = 1;
+					}
+					  
 			
-		
+				$data2 = array(
+						'tv' => $tv,
+						'frigider' => $frigider,
+						'internet' => $internet,
+						'grill' => $grill,
+						'apacalda' => $apacalda,
+						'parcare_in' => $parcare_in);
+						
 				$this->db->update('cazarea', $data1, "cazare_id =".$cid );
 		
 				$this->db->update('extras', $data2, "cazare_id =".$cid );
+				
+				$this->session->set_flashdata('saved', 'yes');
+								
+				redirect(edit);
 			}
 		}
 		
 	}
 	
+	function deleteall($cidd)
+	{
+		$this->db->delete('cazarea', array('cazare_id' => $cidd)); 
+		$this->db->delete('extras', array('cazare_id' => $cidd)); 
+		
+		$dir='pictures/'.$cidd;
+		
+		function rrmdir($dir) {
+		   if (is_dir($dir)) {
+			 $objects = scandir($dir);
+			 foreach ($objects as $object) {
+			   if ($object != "." && $object != "..") {
+				 if (filetype($dir."/".$object) == "dir") rrmdir($dir."/".$object); else unlink($dir."/".$object);
+			   }
+			 }
+			 reset($objects);
+			 rmdir($dir);
+		   }
+		 } 
+		
+		
+		
+		$this->session->set_flashdata('deleted', 'yes');
+		
+		redirect(edit);
+	}	
 	
 	function index()
 	{
 		$data1['title'] = 'CazareCarei.ro';
 		$data1['link'] = 'yes';
+		
 			
 		$un = $this->session->userdata('user');
 		$uid = $this->login_model->get_uid($un);
 		//var_dump($uid);
 		$cazari = $this->list_model->return_user_owned($uid->user_id);
-		//var_dump($cazari);			
-		foreach ($cazari as $key => $value)
+		//var_dump($cazari);		
+		if($cazari)
+		{	
+			foreach ($cazari as $key => $value)
 			{
 				//var_dump($key);
 				$x = $value->cazare_id;
@@ -74,6 +139,11 @@ class Edit extends CI_Controller {
 				foreach($extra[$x] as $row => $data)
 					$data2['item'][$x][$row]=$data;
 			}
+		}
+		else
+		{
+			$data2['item'] = 'N/A';	
+		}
 		
 		$this->load->view('header',$data1);
 		$this->load->view('edit_page',$data2);

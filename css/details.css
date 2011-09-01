@@ -19,7 +19,7 @@ div.contentWrap {
         background-position: center;
 		padding-left:15px;
 		padding-right:15px;
-		padding-top:45px;
+		padding-top:50px;
 		padding-down:85px;
 		overflow:auto;  
 }
@@ -200,7 +200,7 @@ a.disabled {
 	left:auto;
 	right:auto;
 	text-align:center;
-    margin-top: 10px;
+    margin-top: 3px;
 	font-family:'Kreon', arial, serif;
 	font-size:24px;
 	text-decoration:underline;

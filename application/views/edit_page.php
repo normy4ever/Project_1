@@ -1,6 +1,18 @@
 <div>
 
 <?
+	if($this->session->flashdata('saved'))
+	{
+		echo '<p class="message"> Salvat <p>';	
+	}
+	
+	if($this->session->flashdata('deleted'))
+	{
+		echo '<p class="message"> Cazare ștersă <p>';	
+	}
+
+	if($item!='N/A')
+	{
 	foreach ($item as $key => $value)
 			{
 				
@@ -21,7 +33,7 @@
                 <div class="item_for_edit">
                   <?  
 				  		echo '<p style="float:left;margin-left:15px; overflow:hidden;">'.$value['cazare_id'].'</p>';
-				  		
+									  		
 						echo form_open('edit/update/'.$value['cazare_id']);
 				  		
 						echo '<div style="width:60%;float:left;">';
@@ -134,19 +146,44 @@
 						echo '<br />';
 						echo '<br />';					
 						echo '<p style="width:50%;float:left; height:auto; display:block;padding-left:20px;">'.form_submit('update', 'Actualizare date').'</p>';
-						echo form_close();
+						echo form_close();				
 						
 						echo '<p id="del_caz">';
-						echo anchor('edit/deleteall/'.$value['cazare_id'],'Sterge cazarea');
+						
+						$atr=array(
+							'id' => 'delme',
+							'class' => 'modalInput',
+							'rel' => '#yesno',
+							'onclick' => 'Application.Del_answer('.$value['cazare_id'].')'						
+						);
+						echo anchor('edit/deleteall/'.$value['cazare_id'],'Sterge cazarea',$atr);
 						echo '</p>';	
 					?>
                 </div>
-    			<!--</div>
-			  </div>-->
-    
+    			
+    <div class="modal" id="yesno">
+	<h2> Vrei să ștergi cazarea? </h2>
+
+	<p>
+    <?
+		
+		/*echo form_open('edit/deleteall/'.$value['cazare_id']);
+		echo form_submit('delete', 'Da');
+		echo form_close();*/	
+		echo '<button class="question_b"> Da </button>';
+    	echo '<button class="close"> Nu </button>';
+	?>	
+		
+	</p>
+</div>
 <? 			
-                
-			} 
+			}
+		} 
+		else
+		{
+			echo '<p> Nu ai inca cazari in baza de date! </p>';	
+		}
 ?>
 
 </div>
+

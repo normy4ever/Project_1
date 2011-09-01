@@ -185,7 +185,7 @@ echo meta($meta); */
 	</div> <!--header-->
     
     <div id="contents">
-    <div id="message">     
+    <div class="message">     
      <?php 	
 			if($this->session->flashdata('message'))
 			{	

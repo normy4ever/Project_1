@@ -93,8 +93,14 @@ class List_model extends CI_Model {
 				//var_dump($value);
 				$data[$value->cazare_id]=$value;
 			}
-			
-		return $data;
+		if(isset($data))
+		{	
+			return $data;
+		}
+		else
+		{
+			return false;	
+		}
 	}
 	
 	
